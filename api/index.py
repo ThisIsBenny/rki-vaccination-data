@@ -4,54 +4,55 @@ import openpyxl
 from io import BytesIO
 import urllib.request
 
+# Source http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung
 states = {
   'Baden-Württemberg': {
-    'total': 0
+    'total': 11069533
   },
   'Bayern': {
-    'total': 0
+    'total': 13076721
   },
   'Berlin': {
-    'total': 0
+    'total': 3644826
   },
   'Brandenburg': {
-    'total': 0
+    'total': 2511917
   },
   'Bremen': {
-    'total': 0
+    'total': 682986
   },
   'Hamburg': {
-    'total': 0
+    'total': 1841179
   },
   'Hessen': {
-    'total': 0
+    'total': 6265809
   },
   'Mecklenburg-Vorpommern': {
-    'total': 0
+    'total': 1609675
   },
   'Niedersachsen': {
-    'total': 0
+    'total': 7982448
   },
   'Nordrhein-Westfalen': {
-    'total': 0
+    'total': 17932651
   },
   'Rheinland-Pfalz': {
-    'total': 0
+    'total': 4084844
   },
   'Saarland': {
-    'total': 0
+    'total':  990509
   },
   'Sachsen': {
-    'total': 0
+    'total': 4077937
   },
   'Sachsen-Anhalt': {
-    'total': 0
+    'total': 2208321
   },
   'Schleswig-Holstein': {
-    'total': 0
+    'total': 2896712
   },
   'Thüringen': {
-    'total': 0
+    'total': 2143145
   }
 }
 
@@ -75,7 +76,7 @@ for row in sheet.iter_rows(max_row=17):
 res = {
   'states': states,
   'vaccinated': sumStates,
-  'total': 0
+  'total': 83019213
 }
 
 class handler(BaseHTTPRequestHandler):
