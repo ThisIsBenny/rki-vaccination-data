@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 import json
+import datetime
 import openpyxl
 from io import BytesIO
 import urllib.request
@@ -66,8 +67,13 @@ response = urllib.request.urlopen(req)
 file = response.read()
 
 wb = openpyxl.load_workbook(filename = BytesIO(file)) 
-sheet = wb['Presse']
-for row in sheet.iter_rows(max_row=17):
+
+# Load update time
+lastUpdateRawString = wb['Erläuterung']['A6'].value.replace('Datenstand: ', '').replace(' Uhr', '')
+lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%Y, %H:%M')
+
+# Load data from rows
+for row in wb['Presse'].iter_rows(max_row=17):
   aColumn = row[0].value.replace("*", "")
   if aColumn in states:
     states[aColumn]['vaccinated'] = row[1].value
@@ -75,6 +81,7 @@ for row in sheet.iter_rows(max_row=17):
     sumStates = sumStates + row[1].value
 
 res = {
+  'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
   'total': 83019213,
