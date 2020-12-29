@@ -1,5 +1,5 @@
 # rki-vaccination-data
-The script provides the current vaccination figures of the 16 German federal states as JSON API.
+The script provides the current vaccination data of the 16 German federal states as JSON API.
 The data source is an Excel sheet provided by RKI.
 
 API: https://rki-vaccination-data.vercel.app/api
