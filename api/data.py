@@ -87,5 +87,3 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     self.wfile.write(json.dumps(res).encode())
     return
-
-return handler
