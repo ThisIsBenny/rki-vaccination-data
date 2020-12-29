@@ -71,14 +71,14 @@ for row in sheet.iter_rows(max_row=17):
   aColumn = row[0].value.replace("*", "")
   if aColumn in states:
     states[aColumn]['vaccinated'] = row[1].value
-    states[aColumn]['quote'] = 100 / states[aColumn]['total'] * row[1].value
+    states[aColumn]['quote'] = round(100 / states[aColumn]['total'] * row[1].value, 4)
     sumStates = sumStates + row[1].value
 
 res = {
   'states': states,
   'vaccinated': sumStates,
   'total': 83019213,
-  'quote': 100 / 83019213 * sumStates
+  'quote': round(100 / 83019213 * sumStates, 4)
 }
 
 class handler(BaseHTTPRequestHandler):
