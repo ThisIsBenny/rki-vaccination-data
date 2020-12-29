@@ -78,7 +78,7 @@ res = {
   'states': states,
   'vaccinated': sumStates,
   'total': 83019213,
-  'quote'= 100 / 83019213 * sumStates
+  'quote': 100 / 83019213 * sumStates
 }
 
 class handler(BaseHTTPRequestHandler):
