@@ -72,7 +72,7 @@ for row in sheet.iter_rows(max_row=17):
     states[aColumn]['vaccinated'] = row[1].value
     sumStates = sumStates + row[1].value
 
-response = {
+res = {
   'states': states,
   'vaccinated': sumStates,
   'total': 0
