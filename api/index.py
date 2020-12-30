@@ -90,8 +90,6 @@ res = {
   'quote': round(sumStates / 83019213 * 100, 2)
 }
 
-print(res)
-
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
     self.send_response(200)
