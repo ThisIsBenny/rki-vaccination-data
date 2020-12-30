@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/api",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "public, max-age=0, s-maxage=3600, stale-while-revalidate"
+        }
+      ]
+    }
+  ]
+}
