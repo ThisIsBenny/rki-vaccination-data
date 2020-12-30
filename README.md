@@ -23,6 +23,8 @@ Base-URL: https://rki-vaccination-data.vercel.app
       ```json
       {
         "lastUpdate": "2020-12-30T00:00:00",
+        "total": 83019213,
+        "vaccinated": 78109,
         "quote": 0.09,
         "states": {
             "Baden-Württemberg": {
@@ -105,9 +107,7 @@ Base-URL: https://rki-vaccination-data.vercel.app
                 "total": 2143145,
                 "vaccinated": 672
             }
-        },
-        "total": 83019213,
-        "vaccinated": 78109
+        }
     }
       ```
  
