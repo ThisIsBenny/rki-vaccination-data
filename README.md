@@ -5,8 +5,7 @@ The data source is an Excel sheet provided by RKI.
 ## API
 Base-URL: https://rki-vaccination-data.vercel.app
 
-**Show vaccination data**
-----
+### Show vaccination data
   Returns json data about a single user.
 
 * **URL**
