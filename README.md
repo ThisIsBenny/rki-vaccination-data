@@ -134,7 +134,7 @@ Base-URL: https://rki-vaccination-data.vercel.app
   ```javascript
     const req = new Request('https://rki-vaccination-data.vercel.app/api')
     const res = await req.loadJSON()
-    console.log(res) // gesamt Zahl an Impfungen
+    console.log(res)
   ```
 
 ## Data-Sources
