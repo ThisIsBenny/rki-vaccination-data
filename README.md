@@ -117,6 +117,7 @@ Base-URL: https://rki-vaccination-data.vercel.app
     **Content:** `<HTML>`
 
 * **Sample Call:**
+
   jQuery:
   ```javascript
     var settings = {
