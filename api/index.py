@@ -69,11 +69,13 @@ file = response.read()
 wb = openpyxl.load_workbook(filename = BytesIO(file)) 
 
 # Load update time
-lastUpdateRawString = wb['Erläuterung']['A6'].value.replace('Datenstand: ', '').replace(' Uhr', '')
-lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%Y, %H:%M')
+# lastUpdateRawString = wb['Erläuterung']['A6'].value.replace('Datenstand: ', '').replace(' Uhr', '')
+# lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%Y, %H:%M')
+lastUpdateRawString = wb.sheetnames[1]
+lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%y')
 
 # Load data from rows
-for row in wb['Presse'].iter_rows(max_row=17):
+for row in wb[wb.sheetnames[1]].iter_rows(max_row=17):
   aColumn = row[0].value.replace("*", "")
   if aColumn in states:
     states[aColumn]['vaccinated'] = row[1].value
@@ -87,6 +89,8 @@ res = {
   'total': 83019213,
   'quote': round(sumStates / 83019213 * 100, 2)
 }
+
+print(res)
 
 class handler(BaseHTTPRequestHandler):
 
