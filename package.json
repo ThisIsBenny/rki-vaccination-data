@@ -12,7 +12,7 @@
     "url": "git@github.com:ThisIsBenny/rki-vaccination-data.git"
   },
   "author": "Benny Hierl",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ThisIsBenny/rki-vaccination-data/issues"
   },
