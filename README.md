@@ -9,7 +9,7 @@ The data source is an Excel sheet provided by RKI. The data will be updated ever
 
 # API
 
-Base-URL: [https://rki-vaccination-data.vercel.app](https://rki-vaccination-data.vercel.app)
+Base-URL: `https://rki-vaccination-data.vercel.app
 
 ## Show vaccination data
 
@@ -17,7 +17,7 @@ Base-URL: [https://rki-vaccination-data.vercel.app](https://rki-vaccination-data
 
 ### Endpoint
 
-```sh
+```
   GET https://rki-vaccination-data.vercel.app/api
 ```
 
