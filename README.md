@@ -1,6 +1,6 @@
 ---
 home: true
-lang: de-DE
+lang: en-EN
 footer: Made with ❤️ in Düsseldorf
 ---
 
@@ -8,10 +8,10 @@ The API provides the current covid-19 vaccination data of the 16 German federal 
 The data source is an Excel sheet provided by RKI. The data will be updated every working day by the RKI.
 
 ## API
-Base-URL: https://rki-vaccination-data.vercel.app
+Base-URL: [https://rki-vaccination-data.vercel.app](https://rki-vaccination-data.vercel.app)
 
 ### Show vaccination data
-  Returns json data about a single user.
+  Returns json data with the numbers for germany and every state.
 
 * **URL**
 
@@ -24,7 +24,7 @@ Base-URL: https://rki-vaccination-data.vercel.app
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+    **Content:**
       ```json
       {
         "lastUpdate": "2020-12-30T00:00:00",
@@ -142,6 +142,11 @@ Base-URL: https://rki-vaccination-data.vercel.app
     console.log(res)
   ```
 
+## Code
+The code of the API, which is based on Python is Open-Source:
+
+<<< @/api/index.py
+
 ## Data-Sources
-* http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung
-* https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html
+* [http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung](http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung)
+* [https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html)
