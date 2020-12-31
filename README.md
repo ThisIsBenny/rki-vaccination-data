@@ -1,6 +1,11 @@
-# rki-covid-19-vaccination-data
-The script provides the current covid-19 vaccination data of the 16 German federal states as JSON API.
-The data source is an Excel sheet provided by RKI.
+---
+home: true
+lang: de-DE
+footer: Made with ❤️ in Düsseldorf
+---
+
+The API provides the current covid-19 vaccination data of the 16 German federal states as JSON.
+The data source is an Excel sheet provided by RKI. The data will be updated every working day by the RKI.
 
 ## API
 Base-URL: https://rki-vaccination-data.vercel.app

@@ -1,0 +1,24 @@
+{
+  "name": "rki-vaccination-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ThisIsBenny/rki-vaccination-data.git"
+  },
+  "author": "Benny Hierl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThisIsBenny/rki-vaccination-data/issues"
+  },
+  "homepage": "",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.5.0"
+  }
+}
