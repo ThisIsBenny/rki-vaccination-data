@@ -59,6 +59,7 @@ states = {
 
 sumStates = 0
 
+# Request to load excel sheet
 url = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
 
@@ -66,11 +67,11 @@ req = urllib.request.Request(url, headers=hdr)
 response = urllib.request.urlopen(req)
 file = response.read()
 
+
+# Read excel sheet
 wb = openpyxl.load_workbook(filename = BytesIO(file)) 
 
 # Load update time
-# lastUpdateRawString = wb['Erläuterung']['A6'].value.replace('Datenstand: ', '').replace(' Uhr', '')
-# lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%Y, %H:%M')
 lastUpdateRawString = wb.sheetnames[1]
 lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%y')
 
@@ -90,10 +91,10 @@ res = {
   'quote': round(sumStates / 83019213 * 100, 2)
 }
 
+# HTTP handler
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
     self.send_response(200)
-    self.send_header('X-API', 'https://vercel.com/thisisbenny/rki-vaccination-data')
     self.send_header('Content-Type', 'application/json')
     self.end_headers()
     self.wfile.write(json.dumps(res).encode())
