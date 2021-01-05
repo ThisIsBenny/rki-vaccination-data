@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 import json
+import re
 import datetime
 import openpyxl
 from io import BytesIO
@@ -73,7 +74,8 @@ wb = openpyxl.load_workbook(filename = BytesIO(file))
 
 # Load update time
 lastUpdateRawString = wb.sheetnames[1]
-lastUpdate = datetime.datetime.strptime(lastUpdateRawString, '%d.%m.%y')
+relastUpdateMatch = re.search(r"[\d]{2}\.[\d]{2}\.[\d]{2}", lastUpdateRawString)
+lastUpdate = datetime.datetime.strptime(relastUpdateMatch.group(), '%d.%m.%y')
 
 # Load data from rows
 for row in wb[wb.sheetnames[1]].iter_rows(max_row=17):
