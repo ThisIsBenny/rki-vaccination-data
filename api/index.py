@@ -94,7 +94,7 @@ res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
-  'difference': sheet['C18'].value,
+  'difference': sumDiffStates,
   'vaccinations_per_1000_inhabitants': sheet['D18'].value,
   'total': 83019213,
   'quote': round(sumStates / 83019213 * 100, 2)
