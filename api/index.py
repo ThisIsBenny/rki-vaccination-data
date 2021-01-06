@@ -84,17 +84,17 @@ for row in sheet.iter_rows(max_row=17):
   aColumn = row[0].value.replace("*", "")
   if aColumn in states:
     states[aColumn]['vaccinated'] = row[1].value
-    states[aColumn]['difference'] = row[2].value
+    states[aColumn]['difference_to_the_previous_day'] = row[2].value
     states[aColumn]['vaccinations_per_1000_inhabitants'] = row[3].value
     states[aColumn]['quote'] = round(row[1].value / states[aColumn]['total'] * 100, 2)
     sumStates += states[aColumn]['vaccinated']
-    sumDiffStates += states[aColumn]['difference']
+    sumDiffStates += states[aColumn]['difference_to_the_previous_day']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
-  'difference': sumDiffStates,
+  'difference_to_the_previous_day': sumDiffStates,
   'vaccinations_per_1000_inhabitants': sheet['D18'].value,
   'total': 83019213,
   'quote': round(sumStates / 83019213 * 100, 2)
