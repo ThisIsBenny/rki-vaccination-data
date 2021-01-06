@@ -10,5 +10,10 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/api.*",
+      "destination": "/api" }
   ]
 }
