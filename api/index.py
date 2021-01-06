@@ -59,6 +59,7 @@ states = {
 }
 
 sumStates = 0
+sumDiffStates = 0
 
 # Request to load excel sheet
 url = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
@@ -87,11 +88,12 @@ for row in sheet.iter_rows(max_row=17):
     states[aColumn]['vaccinations_per_1000_inhabitants'] = row[3].value
     states[aColumn]['quote'] = round(row[1].value / states[aColumn]['total'] * 100, 2)
     sumStates += states[aColumn]['vaccinated']
+    sumDiffStates += states[aColumn]['difference']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
-  'vaccinated': sheet['B18'].value,
+  'vaccinated': sumStates,
   'difference': sheet['C18'].value,
   'vaccinations_per_1000_inhabitants': sheet['D18'].value,
   'total': 83019213,
