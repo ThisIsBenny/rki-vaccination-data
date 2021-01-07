@@ -83,7 +83,7 @@ lastUpdate = datetime.datetime.strptime(relastUpdateMatch.group(), '%d.%m.%y')
 for row in sheet.iter_rows(max_row=17):
   aColumn = row[1].value.replace("*", "")
   if aColumn in states:
-    states[aColumn]['rs'] = row[1].value
+    states[aColumn]['rs'] = row[0].value
     states[aColumn]['vaccinated'] = row[2].value
     states[aColumn]['difference_to_the_previous_day'] = row[3].value
     states[aColumn]['vaccinations_per_1000_inhabitants'] = row[4].value
