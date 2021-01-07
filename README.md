@@ -187,3 +187,5 @@ The API Code is Open-Source
 
 * [http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung](http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung)
 * [https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html)
+
+Licence: Robert Koch-Institut (RKI), dl-de/by-2-0
