@@ -6,55 +6,55 @@ import openpyxl
 from io import BytesIO
 import urllib.request
 
-# Source http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung
+# Source https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html
 states = {
   'Baden-Württemberg': {
-    'total': 11069533
+    'total': 11100394
   },
   'Bayern': {
-    'total': 13076721
+    'total': 13124737
   },
   'Berlin': {
-    'total': 3644826
+    'total': 3669491
   },
   'Brandenburg': {
-    'total': 2511917
+    'total': 2521893
   },
   'Bremen': {
-    'total': 682986
+    'total': 681202
   },
   'Hamburg': {
-    'total': 1841179
+    'total': 1847253
   },
   'Hessen': {
-    'total': 6265809
+    'total': 6288080
   },
   'Mecklenburg-Vorpommern': {
-    'total': 1609675
+    'total': 1608138
   },
   'Niedersachsen': {
-    'total': 7982448
+    'total': 7993608
   },
   'Nordrhein-Westfalen': {
-    'total': 17932651
+    'total': 17947221
   },
   'Rheinland-Pfalz': {
-    'total': 4084844
+    'total': 4093903
   },
   'Saarland': {
-    'total':  990509
+    'total':  986887
   },
   'Sachsen': {
-    'total': 4077937
+    'total': 4071971
   },
   'Sachsen-Anhalt': {
-    'total': 2208321
+    'total': 2194782
   },
   'Schleswig-Holstein': {
-    'total': 2896712
+    'total': 2903773
   },
   'Thüringen': {
-    'total': 2143145
+    'total': 2133378
   }
 }
 
@@ -96,9 +96,9 @@ res = {
   'states': states,
   'vaccinated': sumStates,
   'difference_to_the_previous_day': sumDiffStates,
-  'vaccinations_per_1000_inhabitants': sheet['D18'].value,
-  'total': 83019213,
-  'quote': round(sumStates / 83019213 * 100, 2)
+  'vaccinations_per_1000_inhabitants': round(sumStates / 83166711 * 1000, 2),
+  'total': 83166711,
+  'quote': round(sumStates / 83166711 * 100, 2)
 }
 
 # HTTP handler

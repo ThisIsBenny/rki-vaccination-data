@@ -185,5 +185,7 @@ The API Code is Open-Source
 
 # Data-Sources
 
-* [http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung](http://www.statistikportal.de/de/bevoelkerung/flaeche-und-bevoelkerung)
+* [https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html)
 * [https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html)
+
+Licence: Robert Koch-Institut (RKI), dl-de/by-2-0
