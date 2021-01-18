@@ -92,6 +92,7 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['by_accine']['biontech'] = row[3].value
     states[state]['by_accine']['moderna'] = row[4].value
     states[state]['difference_to_the_previous_day'] = row[5].value
+    states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2)
     states[state]['quote'] = row[6].value
 
     # Second vaccination
@@ -107,6 +108,7 @@ res = {
   'states': states,
   'vaccinated': sumStates,
   'difference_to_the_previous_day': sumDiffStates,
+  'vaccinations_per_1000_inhabitants': round(sumStates / totalGermany * 1000, 2),
   'total': totalGermany,
   'quote': round(sumStates / totalGermany * 100, 2)
 }
