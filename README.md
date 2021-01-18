@@ -31,7 +31,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 11100394,
       "rs": "08",
       "vaccinated": 114954,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 114954,
         "moderna": 0
       },
@@ -47,7 +47,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 13124737,
       "rs": "09",
       "vaccinated": 213837,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 213837,
         "moderna": 0
       },
@@ -63,7 +63,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 3669491,
       "rs": "11",
       "vaccinated": 52622,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 52162,
         "moderna": 460
       },
@@ -79,7 +79,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 2521893,
       "rs": "12",
       "vaccinated": 38474,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 38474,
         "moderna": 0
       },
@@ -95,7 +95,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 681202,
       "rs": "04",
       "vaccinated": 11845,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 11845,
         "moderna": 0
       },
@@ -111,7 +111,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 1847253,
       "rs": "02",
       "vaccinated": 24468,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 24468,
         "moderna": 0
       },
@@ -127,7 +127,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 6288080,
       "rs": "06",
       "vaccinated": 72816,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 72816,
         "moderna": 0
       },
@@ -143,7 +143,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 1608138,
       "rs": "13",
       "vaccinated": 37564,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 37444,
         "moderna": 120
       },
@@ -159,7 +159,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 7993608,
       "rs": "03",
       "vaccinated": 90005,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 88766,
         "moderna": 1239
       },
@@ -175,7 +175,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 17947221,
       "rs": "05",
       "vaccinated": 211779,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 211779,
         "moderna": 0
       },
@@ -191,7 +191,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 4093903,
       "rs": "07",
       "vaccinated": 82810,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 81905,
         "moderna": 905
       },
@@ -207,7 +207,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 986887,
       "rs": "10",
       "vaccinated": 15711,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 15711,
         "moderna": 0
       },
@@ -223,7 +223,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 4071971,
       "rs": "14",
       "vaccinated": 50002,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 50002,
         "moderna": 0
       },
@@ -239,7 +239,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 2194782,
       "rs": "15",
       "vaccinated": 33148,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 33148,
         "moderna": 0
       },
@@ -255,7 +255,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 2903773,
       "rs": "01",
       "vaccinated": 65849,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 65849,
         "moderna": 0
       },
@@ -271,7 +271,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "total": 2133378,
       "rs": "16",
       "vaccinated": 23413,
-      "by_accine": {
+      "vaccinated_by_accine": {
         "biontech": 23413,
         "moderna": 0
       },
