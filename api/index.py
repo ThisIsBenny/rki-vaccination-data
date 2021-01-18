@@ -89,9 +89,9 @@ for row in sheet.iter_rows(max_row=19):
 
     # First vaccination
     states[state]['vaccinated'] = row[2].value
-    states[state]['by_accine'] = {}
-    states[state]['by_accine']['biontech'] = row[3].value
-    states[state]['by_accine']['moderna'] = row[4].value
+    states[state]['vaccinated_by_accine'] = {}
+    states[state]['vaccinated_by_accine']['biontech'] = row[3].value
+    states[state]['vaccinated_by_accine']['moderna'] = row[4].value
     states[state]['difference_to_the_previous_day'] = row[5].value
     states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2)
     states[state]['quote'] = round(row[6].value, 2)
