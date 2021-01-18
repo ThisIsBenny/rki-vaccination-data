@@ -38,7 +38,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 5352,
       "vaccinations_per_1000_inhabitants": 10.36,
       "quote": 1.04,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -54,7 +54,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 5296,
       "vaccinations_per_1000_inhabitants": 16.29,
       "quote": 1.63,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -70,7 +70,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 1571,
       "vaccinations_per_1000_inhabitants": 14.34,
       "quote": 1.43,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 1933,
         "difference_to_the_previous_day": 1933
       }
@@ -86,7 +86,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 0,
       "vaccinations_per_1000_inhabitants": 15.26,
       "quote": 1.53,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -102,7 +102,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 394,
       "vaccinations_per_1000_inhabitants": 17.39,
       "quote": 1.74,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -118,7 +118,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 1184,
       "vaccinations_per_1000_inhabitants": 13.25,
       "quote": 1.32,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 425,
         "difference_to_the_previous_day": 425
       }
@@ -134,7 +134,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 926,
       "vaccinations_per_1000_inhabitants": 11.58,
       "quote": 1.16,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 1736,
         "difference_to_the_previous_day": 1736
       }
@@ -150,7 +150,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 0,
       "vaccinations_per_1000_inhabitants": 23.36,
       "quote": 2.34,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -166,7 +166,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 813,
       "vaccinations_per_1000_inhabitants": 11.26,
       "quote": 1.13,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 335,
         "difference_to_the_previous_day": 335
       }
@@ -182,7 +182,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 5728,
       "vaccinations_per_1000_inhabitants": 11.8,
       "quote": 1.18,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 968,
         "difference_to_the_previous_day": 906
       }
@@ -198,7 +198,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 2879,
       "vaccinations_per_1000_inhabitants": 20.23,
       "quote": 2.02,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 350,
         "difference_to_the_previous_day": 350
       }
@@ -214,7 +214,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 250,
       "vaccinations_per_1000_inhabitants": 15.92,
       "quote": 1.59,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -230,7 +230,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 3019,
       "vaccinations_per_1000_inhabitants": 12.28,
       "quote": 1.23,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 155,
         "difference_to_the_previous_day": 155
       }
@@ -246,7 +246,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 21,
       "vaccinations_per_1000_inhabitants": 15.1,
       "quote": 1.51,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 679,
         "difference_to_the_previous_day": 624
       }
@@ -262,7 +262,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 3524,
       "vaccinations_per_1000_inhabitants": 22.68,
       "quote": 2.27,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }
@@ -278,7 +278,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
       "difference_to_the_previous_day": 195,
       "vaccinations_per_1000_inhabitants": 10.97,
       "quote": 1.1,
-      "2nd-vaccination": {
+      "2nd_vaccination": {
         "vaccinated": 0,
         "difference_to_the_previous_day": 0
       }

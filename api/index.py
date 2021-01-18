@@ -97,9 +97,9 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['quote'] = round(row[6].value, 2)
 
     # Second vaccination
-    states[state]['2nd-vaccination'] = {}
-    states[state]['2nd-vaccination']['vaccinated'] = row[7].value
-    states[state]['2nd-vaccination']['difference_to_the_previous_day'] = row[8].value
+    states[state]['2nd_vaccination'] = {}
+    states[state]['2nd_vaccination']['vaccinated'] = row[7].value
+    states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[8].value
 
     sumStates += states[state]['vaccinated']
     sumDiffStates += states[state]['difference_to_the_previous_day']
