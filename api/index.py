@@ -7,6 +7,7 @@ from io import BytesIO
 import urllib.request
 
 # Source https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html
+totalGermany = 83166711
 states = {
   'Baden-Württemberg': {
     'total': 11100394
@@ -58,9 +59,6 @@ states = {
   }
 }
 
-sumStates = 0
-sumDiffStates = 0
-
 # Request to load excel sheet
 url = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
@@ -80,25 +78,39 @@ relastUpdateMatch = re.search(r"[\d]{2}\.[\d]{2}\.[\d]{2}", lastUpdateRawString)
 lastUpdate = datetime.datetime.strptime(relastUpdateMatch.group(), '%d.%m.%y')
 
 # Load data from rows
-for row in sheet.iter_rows(max_row=17):
-  aColumn = row[1].value.replace("*", "")
-  if aColumn in states:
-    states[aColumn]['rs'] = str(row[0].value)
-    states[aColumn]['vaccinated'] = row[2].value
-    states[aColumn]['difference_to_the_previous_day'] = row[3].value
-    states[aColumn]['vaccinations_per_1000_inhabitants'] = row[4].value
-    states[aColumn]['quote'] = round(states[aColumn]['vaccinated'] / states[aColumn]['total'] * 100, 2)
-    sumStates += states[aColumn]['vaccinated']
-    sumDiffStates += states[aColumn]['difference_to_the_previous_day']
+sumStates = 0
+sumDiffStates = 0
+for row in sheet.iter_rows(max_row=19):
+  if row[1].value is None:
+    continue
+  state = row[1].value.replace("*", "")
+  if state in states:
+    states[state]['rs'] = str(row[0].value)
+
+    # First vaccination
+    states[state]['vaccinated'] = row[2].value
+    states[state]['vaccinated_BioNTech'] = row[3].value
+    states[state]['vaccinated_Moderna'] = row[4].value
+    states[state]['difference_to_the_previous_day'] = row[5].value
+    states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2),
+    states[state]['quote'] = row[6].value
+
+    # Second vaccination
+    states[state]['2ndVaccination'] = {}
+    states[state]['2ndVaccination']['vaccinated'] = row[7].value
+    states[state]['2ndVaccination']['difference_to_the_previous_day'] = row[8].value
+
+    sumStates += states[state]['vaccinated']
+    sumDiffStates += states[state]['difference_to_the_previous_day']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
   'difference_to_the_previous_day': sumDiffStates,
-  'vaccinations_per_1000_inhabitants': round(sumStates / 83166711 * 1000, 2),
-  'total': 83166711,
-  'quote': round(sumStates / 83166711 * 100, 2)
+  'vaccinations_per_1000_inhabitants': round(sumStates / totalGermany * 1000, 2),
+  'total': totalGermany,
+  'quote': round(sumStates / totalGermany * 100, 2)
 }
 
 # HTTP handler
