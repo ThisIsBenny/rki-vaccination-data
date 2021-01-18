@@ -92,7 +92,7 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['vaccinated_BioNTech'] = row[3].value
     states[state]['vaccinated_Moderna'] = row[4].value
     states[state]['difference_to_the_previous_day'] = row[5].value
-    states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2),
+    states[state]['vaccinations_per_1000_inhabitants'] = float(round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2)),
     states[state]['quote'] = row[6].value
 
     # Second vaccination
