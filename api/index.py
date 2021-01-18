@@ -89,6 +89,7 @@ for row in sheet.iter_rows(max_row=19):
 
     # First vaccination
     states[state]['vaccinated'] = row[2].value
+    states[state]['by_accine'] = {}
     states[state]['by_accine']['biontech'] = row[3].value
     states[state]['by_accine']['moderna'] = row[4].value
     states[state]['difference_to_the_previous_day'] = row[5].value
