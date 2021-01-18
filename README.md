@@ -25,126 +25,270 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
 
 ```json
 {
-  "lastUpdate": "2021-01-04T00:00:00",
+  "lastUpdate": "2021-01-17T00:00:00",
   "states": {
     "Baden-Württemberg": {
-      "total": 11069533,
-      "vaccinated": 32182,
-      "difference": 4758,
-      "vaccinations_per_1000_inhabitants": 2.8991763715774415,
-      "quote": 0.29
+      "total": 11100394,
+      "rs": "08",
+      "vaccinated": 114954,
+      "by_accine": {
+        "biontech": 114954,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 5352,
+      "vaccinations_per_1000_inhabitants": 10.36,
+      "quote": 1.04,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Bayern": {
-      "total": 13076721,
-      "vaccinated": 77876,
-      "difference": 11618,
-      "vaccinations_per_1000_inhabitants": 5.933528420417111,
-      "quote": 0.6
+      "total": 13124737,
+      "rs": "09",
+      "vaccinated": 213837,
+      "by_accine": {
+        "biontech": 213837,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 5296,
+      "vaccinations_per_1000_inhabitants": 16.29,
+      "quote": 1.63,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Berlin": {
-      "total": 3644826,
-      "vaccinated": 19389,
-      "difference": 1631,
-      "vaccinations_per_1000_inhabitants": 5.28383909375987,
-      "quote": 0.53
+      "total": 3669491,
+      "rs": "11",
+      "vaccinated": 52622,
+      "by_accine": {
+        "biontech": 52162,
+        "moderna": 460
+      },
+      "difference_to_the_previous_day": 1571,
+      "vaccinations_per_1000_inhabitants": 14.34,
+      "quote": 1.43,
+      "2nd-vaccination": {
+        "vaccinated": 1933,
+        "difference_to_the_previous_day": 1933
+      }
     },
     "Brandenburg": {
-      "total": 2511917,
-      "vaccinated": 3334,
-      "difference": 25,
-      "vaccinations_per_1000_inhabitants": 1.3220227820926582,
-      "quote": 0.13
+      "total": 2521893,
+      "rs": "12",
+      "vaccinated": 38474,
+      "by_accine": {
+        "biontech": 38474,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 0,
+      "vaccinations_per_1000_inhabitants": 15.26,
+      "quote": 1.53,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Bremen": {
-      "total": 682986,
-      "vaccinated": 2653,
-      "difference": 700,
-      "vaccinations_per_1000_inhabitants": 3.894586334156388,
-      "quote": 0.39
+      "total": 681202,
+      "rs": "04",
+      "vaccinated": 11845,
+      "by_accine": {
+        "biontech": 11845,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 394,
+      "vaccinations_per_1000_inhabitants": 17.39,
+      "quote": 1.74,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Hamburg": {
-      "total": 1841179,
-      "vaccinated": 4756,
-      "difference": 616,
-      "vaccinations_per_1000_inhabitants": 2.5746337940715214,
-      "quote": 0.26
+      "total": 1847253,
+      "rs": "02",
+      "vaccinated": 24468,
+      "by_accine": {
+        "biontech": 24468,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 1184,
+      "vaccinations_per_1000_inhabitants": 13.25,
+      "quote": 1.32,
+      "2nd-vaccination": {
+        "vaccinated": 425,
+        "difference_to_the_previous_day": 425
+      }
     },
     "Hessen": {
-      "total": 6265809,
-      "vaccinated": 37795,
-      "difference": 4390,
-      "vaccinations_per_1000_inhabitants": 6.010578745817483,
-      "quote": 0.6
+      "total": 6288080,
+      "rs": "06",
+      "vaccinated": 72816,
+      "by_accine": {
+        "biontech": 72816,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 926,
+      "vaccinations_per_1000_inhabitants": 11.58,
+      "quote": 1.16,
+      "2nd-vaccination": {
+        "vaccinated": 1736,
+        "difference_to_the_previous_day": 1736
+      }
     },
     "Mecklenburg-Vorpommern": {
-      "total": 1609675,
-      "vaccinated": 13832,
-      "difference": 1773,
-      "vaccinations_per_1000_inhabitants": 8.601251882612065,
-      "quote": 0.86
+      "total": 1608138,
+      "rs": "13",
+      "vaccinated": 37564,
+      "by_accine": {
+        "biontech": 37444,
+        "moderna": 120
+      },
+      "difference_to_the_previous_day": 0,
+      "vaccinations_per_1000_inhabitants": 23.36,
+      "quote": 2.34,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Niedersachsen": {
-      "total": 7982448,
-      "vaccinated": 8665,
-      "difference": 3271,
-      "vaccinations_per_1000_inhabitants": 1.083991108896008,
-      "quote": 0.11
+      "total": 7993608,
+      "rs": "03",
+      "vaccinated": 90005,
+      "by_accine": {
+        "biontech": 88766,
+        "moderna": 1239
+      },
+      "difference_to_the_previous_day": 813,
+      "vaccinations_per_1000_inhabitants": 11.26,
+      "quote": 1.13,
+      "2nd-vaccination": {
+        "vaccinated": 335,
+        "difference_to_the_previous_day": 335
+      }
     },
     "Nordrhein-Westfalen": {
-      "total": 17932651,
-      "vaccinated": 62692,
-      "difference": 4435,
-      "vaccinations_per_1000_inhabitants": 3.4931313321432884,
-      "quote": 0.35
+      "total": 17947221,
+      "rs": "05",
+      "vaccinated": 211779,
+      "by_accine": {
+        "biontech": 211779,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 5728,
+      "vaccinations_per_1000_inhabitants": 11.8,
+      "quote": 1.18,
+      "2nd-vaccination": {
+        "vaccinated": 968,
+        "difference_to_the_previous_day": 906
+      }
     },
     "Rheinland-Pfalz": {
-      "total": 4084844,
-      "vaccinated": 9891,
-      "difference": 1609,
-      "vaccinations_per_1000_inhabitants": 2.4160318405199144,
-      "quote": 0.24
+      "total": 4093903,
+      "rs": "07",
+      "vaccinated": 82810,
+      "by_accine": {
+        "biontech": 81905,
+        "moderna": 905
+      },
+      "difference_to_the_previous_day": 2879,
+      "vaccinations_per_1000_inhabitants": 20.23,
+      "quote": 2.02,
+      "2nd-vaccination": {
+        "vaccinated": 350,
+        "difference_to_the_previous_day": 350
+      }
     },
     "Saarland": {
-      "total": 990509,
-      "vaccinated": 4836,
-      "difference": 687,
-      "vaccinations_per_1000_inhabitants": 4.9002570709716515,
-      "quote": 0.49
+      "total": 986887,
+      "rs": "10",
+      "vaccinated": 15711,
+      "by_accine": {
+        "biontech": 15711,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 250,
+      "vaccinations_per_1000_inhabitants": 15.92,
+      "quote": 1.59,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Sachsen": {
-      "total": 4077937,
-      "vaccinated": 7740,
-      "difference": 2874,
-      "vaccinations_per_1000_inhabitants": 1.9007993917441948,
-      "quote": 0.19
+      "total": 4071971,
+      "rs": "14",
+      "vaccinated": 50002,
+      "by_accine": {
+        "biontech": 50002,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 3019,
+      "vaccinations_per_1000_inhabitants": 12.28,
+      "quote": 1.23,
+      "2nd-vaccination": {
+        "vaccinated": 155,
+        "difference_to_the_previous_day": 155
+      }
     },
     "Sachsen-Anhalt": {
-      "total": 2208321,
-      "vaccinated": 15628,
-      "difference": 2262,
-      "vaccinations_per_1000_inhabitants": 7.120524954186794,
-      "quote": 0.71
+      "total": 2194782,
+      "rs": "15",
+      "vaccinated": 33148,
+      "by_accine": {
+        "biontech": 33148,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 21,
+      "vaccinations_per_1000_inhabitants": 15.1,
+      "quote": 1.51,
+      "2nd-vaccination": {
+        "vaccinated": 679,
+        "difference_to_the_previous_day": 624
+      }
     },
     "Schleswig-Holstein": {
-      "total": 2896712,
-      "vaccinated": 12978,
-      "difference": 3421,
-      "vaccinations_per_1000_inhabitants": 4.469357625406669,
-      "quote": 0.45
+      "total": 2903773,
+      "rs": "01",
+      "vaccinated": 65849,
+      "by_accine": {
+        "biontech": 65849,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 3524,
+      "vaccinations_per_1000_inhabitants": 22.68,
+      "quote": 2.27,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     },
     "Thüringen": {
-      "total": 2143145,
-      "vaccinated": 2715,
-      "difference": 493,
-      "vaccinations_per_1000_inhabitants": 1.2726296043176597,
-      "quote": 0.13
+      "total": 2133378,
+      "rs": "16",
+      "vaccinated": 23413,
+      "by_accine": {
+        "biontech": 23413,
+        "moderna": 0
+      },
+      "difference_to_the_previous_day": 195,
+      "vaccinations_per_1000_inhabitants": 10.97,
+      "quote": 1.1,
+      "2nd-vaccination": {
+        "vaccinated": 0,
+        "difference_to_the_previous_day": 0
+      }
     }
   },
-  "vaccinated": 316962,
-  "difference": 44563,
-  "vaccinations_per_1000_inhabitants": 3.8111643010627176,
-  "total": 83019213,
-  "quote": 0.38
+  "vaccinated": 1139297,
+  "difference_to_the_previous_day": 31152,
+  "vaccinations_per_1000_inhabitants": 13.7,
+  "total": 83166711,
+  "quote": 1.37
 }
 ```
 
