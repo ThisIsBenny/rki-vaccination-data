@@ -107,15 +107,17 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['2nd_vaccination']['vaccinated'] = row[8].value
     states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[9].value
 
-    sumStates2nd += states[state]['2nd_vaccination']['vaccinated'] 
-    sumDiffStates2nd += states[state]['2nd_vaccination']['difference_to_the_previous_day'] 
+    sumStates2nd += states[state]['2nd_vaccination']['vaccinated']
+    
+    if states[state]['2nd_vaccination']['difference_to_the_previous_day'] is not None:
+      sumDiffStates2nd += states[state]['2nd_vaccination']['difference_to_the_previous_day']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
   '2nd_vaccination': {
-    'vaccinated': sumStates2nd
+    'vaccinated': sumStates2nd,
     'difference_to_the_previous_day': sumDiffStates2nd
   },
   'sum_vaccine_doses': sumStates + sumStates2nd,
@@ -124,6 +126,8 @@ res = {
   'total': totalGermany,
   'quote': round(sumStates / totalGermany * 100, 2)
 }
+
+print(res)
 
 # HTTP handler
 class handler(BaseHTTPRequestHandler):
