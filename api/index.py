@@ -79,6 +79,7 @@ lastUpdate = datetime.datetime.strptime(relastUpdateMatch.group(), '%d.%m.%y')
 
 # Load data from rows
 sumStates = 0
+sumStates2nd = 0
 sumDiffStates = 0
 for row in sheet.iter_rows(max_row=19):
   if row[1].value is None:
@@ -102,12 +103,14 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[9].value
 
     sumStates += states[state]['vaccinated']
+    sumStates2nd += states[state]['2nd_vaccination']['vaccinated'] 
     sumDiffStates += states[state]['difference_to_the_previous_day']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
+  '2nd_vaccination_vaccinated': sumStates2nd,
   'difference_to_the_previous_day': sumDiffStates,
   'vaccinations_per_1000_inhabitants': round(sumStates / totalGermany * 1000, 2),
   'total': totalGermany,
