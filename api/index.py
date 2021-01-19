@@ -79,7 +79,9 @@ lastUpdate = datetime.datetime.strptime(relastUpdateMatch.group(), '%d.%m.%y')
 
 # Load data from rows
 sumStates = 0
+sumStates2nd = 0
 sumDiffStates = 0
+sumDiffStates2nd = 0
 for row in sheet.iter_rows(max_row=19):
   if row[1].value is None:
     continue
@@ -96,23 +98,36 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2)
     states[state]['quote'] = round(row[7].value, 2)
 
+    sumStates += states[state]['vaccinated']
+    sumDiffStates += states[state]['difference_to_the_previous_day']
+
+
     # Second vaccination
     states[state]['2nd_vaccination'] = {}
     states[state]['2nd_vaccination']['vaccinated'] = row[8].value
     states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[9].value
 
-    sumStates += states[state]['vaccinated']
-    sumDiffStates += states[state]['difference_to_the_previous_day']
+    sumStates2nd += states[state]['2nd_vaccination']['vaccinated']
+    
+    if states[state]['2nd_vaccination']['difference_to_the_previous_day'] is not None:
+      sumDiffStates2nd += states[state]['2nd_vaccination']['difference_to_the_previous_day']
 
 res = {
   'lastUpdate': lastUpdate.isoformat(),
   'states': states,
   'vaccinated': sumStates,
+  '2nd_vaccination': {
+    'vaccinated': sumStates2nd,
+    'difference_to_the_previous_day': sumDiffStates2nd
+  },
+  'sum_vaccine_doses': sumStates + sumStates2nd,
   'difference_to_the_previous_day': sumDiffStates,
   'vaccinations_per_1000_inhabitants': round(sumStates / totalGermany * 1000, 2),
   'total': totalGermany,
   'quote': round(sumStates / totalGermany * 100, 2)
 }
+
+print(res)
 
 # HTTP handler
 class handler(BaseHTTPRequestHandler):
