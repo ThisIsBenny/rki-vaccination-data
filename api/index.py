@@ -88,18 +88,18 @@ for row in sheet.iter_rows(max_row=19):
     states[state]['rs'] = str(row[0].value)
 
     # First vaccination
-    states[state]['vaccinated'] = row[2].value
+    states[state]['vaccinated'] = row[3].value
     states[state]['vaccinated_by_accine'] = {}
-    states[state]['vaccinated_by_accine']['biontech'] = row[3].value
-    states[state]['vaccinated_by_accine']['moderna'] = row[4].value
-    states[state]['difference_to_the_previous_day'] = row[5].value
+    states[state]['vaccinated_by_accine']['biontech'] = row[4].value
+    states[state]['vaccinated_by_accine']['moderna'] = row[5].value
+    states[state]['difference_to_the_previous_day'] = row[6].value
     states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated'] / states[state]['total'] * 1000, 2)
-    states[state]['quote'] = round(row[6].value, 2)
+    states[state]['quote'] = round(row[7].value, 2)
 
     # Second vaccination
     states[state]['2nd_vaccination'] = {}
-    states[state]['2nd_vaccination']['vaccinated'] = row[7].value
-    states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[8].value
+    states[state]['2nd_vaccination']['vaccinated'] = row[8].value
+    states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[9].value
 
     sumStates += states[state]['vaccinated']
     sumDiffStates += states[state]['difference_to_the_previous_day']
