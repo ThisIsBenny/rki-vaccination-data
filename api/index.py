@@ -1,7 +1,7 @@
 """ API Endpont """
 from http.server import BaseHTTPRequestHandler
 import json
-from _utils import scrap_data
+from api._utils import scrap_data
 
 try:
   data = scrap_data.get_data()
