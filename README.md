@@ -330,7 +330,13 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
 
 The API Code is Open-Source
 
+## API Interface
+
 <<< @/api/index.py
+
+## Srapping Data
+
+<<< @/api/_utils/scrap_data.py
 
 # Data-Sources
 
