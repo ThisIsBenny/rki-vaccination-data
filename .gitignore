@@ -225,3 +225,4 @@ sw.*
 .now
 package-lock.json
 public
+.vscode
