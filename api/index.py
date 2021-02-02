@@ -1,9 +1,10 @@
+""" API Endpont """
 from http.server import BaseHTTPRequestHandler
 import json
-from _utils import scrapData
+from _utils import scrap_data
 
 try:
-  data = scrapData.getData()
+  data = scrap_data.get_data()
   res = {
     'lastUpdate': data['lastUpdate'].isoformat(),
     'states': data['states'],
@@ -18,17 +19,18 @@ try:
     'total': data['totalGermany'],
     'quote': round(data['sumStates'] / data['totalGermany'] * 100, 2)
   }
-  statusCode = 200
-except Exception:
+  HTTPCODE = 200
+except TypeError:
   res = {
     'message': 'scrapping data from RKI excel failed'
   }
-  statusCode = 500
+  HTTPCODE = 500
 
-# HTTP handler
-class handler(BaseHTTPRequestHandler):
+class Handler(BaseHTTPRequestHandler):
+  """ HTTP Handler """
   def do_GET(self):
-    self.send_response(statusCode)
+    """ GET Method """
+    self.send_response(HTTPCODE)
     self.send_header('Content-Type', 'application/json')
     self.end_headers()
     self.wfile.write(json.dumps(res).encode())
