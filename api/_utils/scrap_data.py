@@ -9,9 +9,11 @@ from .statics import inhabitants
 def get_file():
   """ Get remote file content """
   # Request to load excel sheet
-  url = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile'
+  url = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten' \
+    '/Impfquotenmonitoring.xlsx?__blob=publicationFile'
   hdr = {
-      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
+      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11' \
+        ' (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
 
   req = urllib.request.Request(url, headers=hdr)
   response = urllib.request.urlopen(req)
@@ -74,7 +76,7 @@ def get_data():
     "states": states,
     "sumStates": sum_states,
     "sumStates2nd": sum_states2nd,
-    "sum_diff_states": sum_diff_states,
-    "sum_diff_states2nd": sum_diff_states2nd,
+    "sumDiffStates": sum_diff_states,
+    "sumDiffStates2nd": sum_diff_states2nd,
     "totalGermany": inhabitants.total
   }

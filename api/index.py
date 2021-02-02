@@ -28,6 +28,7 @@ except TypeError:
 
 class Handler(BaseHTTPRequestHandler):
   """ HTTP Handler """
+  # pylint: disable=invalid-name
   def do_GET(self):
     """ GET Method """
     self.send_response(HTTPCODE)
