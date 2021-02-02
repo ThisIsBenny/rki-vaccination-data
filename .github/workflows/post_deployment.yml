@@ -1,19 +1,14 @@
-name: CI
+name: Post deployment workflow
 
 on: [deployment_status]
 
 jobs:
-  show-event:
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+  api-check:
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Print GitHub event 🖨
-        env:
-          GITHUB_EVENT: ${{ toJson(github.event) }}
-        run: echo "$GITHUB_EVENT"
-      - name: Print GitHub env variables 🖨
-        run: npx @bahmutov/print-env GITHUB
+    - name: Check http status code of production site
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["${{ github.event.deployment_status.target_url }}"]'
+        expected: '[301, 200]'
