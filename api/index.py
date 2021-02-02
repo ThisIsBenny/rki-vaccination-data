@@ -127,8 +127,6 @@ res = {
   'quote': round(sumStates / totalGermany * 100, 2)
 }
 
-print(res)
-
 # HTTP handler
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
