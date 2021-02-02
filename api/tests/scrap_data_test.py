@@ -1,5 +1,6 @@
 """ Unittest """
 import unittest
+# pylint: disable=import-error
 from _utils import scrap_data
 
 class TestModule(unittest.TestCase):

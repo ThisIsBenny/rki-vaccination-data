@@ -4,7 +4,6 @@ import datetime
 from io import BytesIO
 import urllib.request
 import openpyxl
-# pylint: disable=import-error
 from .statics import inhabitants
 
 def get_file():
