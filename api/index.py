@@ -1,7 +1,8 @@
 """ API Endpont """
 from http.server import BaseHTTPRequestHandler
 import json
-from ._utils import scrap_data
+# pylint: disable=import-error
+from api._utils import scrap_data
 
 try:
   data = scrap_data.get_data()
