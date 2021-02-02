@@ -1,7 +1,10 @@
-# Source https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html
-total = 83166711
+""" Static numbers of inhabitants """
+# Source https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung
+# /Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html
 
-states = {
+TOTAL = 83166711
+
+STATES = {
   'Baden-Württemberg': {
     'total': 11100394
   },

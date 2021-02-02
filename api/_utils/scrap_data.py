@@ -22,7 +22,7 @@ def get_file():
 
 def get_data():
   """ Get Data for API """
-  states = inhabitants.states
+  states = inhabitants.STATES
 
   file = get_file()
 
@@ -78,5 +78,5 @@ def get_data():
     "sumStates2nd": sum_states2nd,
     "sumDiffStates": sum_diff_states,
     "sumDiffStates2nd": sum_diff_states2nd,
-    "totalGermany": inhabitants.total
+    "totalGermany": inhabitants.TOTAL
   }
