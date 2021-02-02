@@ -2,11 +2,11 @@
   "version": 2,
   "headers": [
     {
-      "source": "/api",
+      "source": "/(.*)",
       "headers" : [
         {
           "key" : "Cache-Control",
-          "value" : "public, max-age=0, s-maxage=3600, stale-while-revalidate"
+          "value" : "s-maxage=3600, stale-while-revalidate"
         }
       ]
     }
