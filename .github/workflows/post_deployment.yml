@@ -1,0 +1,14 @@
+name: Post deployment workflow
+
+on: [deployment_status]
+
+jobs:
+  api-check:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check http status code of production site
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["${{ github.event.deployment_status.target_url }}", "${{ github.event.deployment_status.target_url }}/api"]'
+        expected: '[200, 200]'
