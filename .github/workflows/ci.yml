@@ -34,4 +34,4 @@ jobs:
     - name: Unittest
       run: |
         cd api
-        python -m tests.scrap_data_test
+        python -m unittest

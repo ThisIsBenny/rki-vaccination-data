@@ -3,6 +3,7 @@ home: true
 lang: en-EN
 footer: Made with ❤️ in Düsseldorf
 ---
+![CI](https://github.com/ThisIsBenny/rki-vaccination-data/workflows/CI/badge.svg)
 
 The API provides the current covid-19 vaccination data of the 16 German federal states as JSON.
 The data source is an Excel sheet provided by RKI. The data will be updated every working day by the RKI.
@@ -334,7 +335,7 @@ The API Code is Open-Source
 
 <<< @/api/index.py
 
-## Srapping Data
+## Scrapping Data
 
 <<< @/api/_utils/scrap_data.py
 
