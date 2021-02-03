@@ -335,7 +335,7 @@ The API Code is Open-Source
 
 <<< @/api/index.py
 
-## Srapping Data
+## Scrapping Data
 
 <<< @/api/_utils/scrap_data.py
 
