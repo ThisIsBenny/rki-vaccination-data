@@ -7,7 +7,7 @@
   },
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/api/index.py",
       "headers" : [
         {
           "key" : "Cache-Control",
