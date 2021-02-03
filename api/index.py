@@ -1,6 +1,7 @@
 """ API Endpont """
 from http.server import BaseHTTPRequestHandler
 import json
+import datetime
 # pylint: disable=import-error
 from api._utils import scrap_data
 
@@ -34,6 +35,7 @@ class Handler(BaseHTTPRequestHandler):
     """ GET Method """
     self.send_response(HTTPCODE)
     self.send_header('Content-Type', 'application/json')
+    self.send_header('X-Cache-Timestamp', datetime.datetime.now().isoformat())
     self.send_header('Access-Control-Allow-Origin', '*')
     self.end_headers()
     self.wfile.write(json.dumps(res).encode())
