@@ -36,7 +36,8 @@ class Handler(BaseHTTPRequestHandler):
     """ GET Method """
     self.send_response(HTTPCODE)
     self.send_header('Content-Type', 'application/json')
-    self.send_header('X-Cache-Timestamp', pytz.timezone('Europe/Berlin').localize(datetime.now()).isoformat())
+    self.send_header('X-Cache-Timestamp',
+      pytz.timezone('Europe/Berlin').localize(datetime.now()).isoformat())
     self.send_header('Access-Control-Allow-Origin', '*')
     self.end_headers()
     self.wfile.write(json.dumps(res).encode())
