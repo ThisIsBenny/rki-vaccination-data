@@ -64,6 +64,9 @@ def get_data():
       # Second vaccination
       states[state]['2nd_vaccination'] = {}
       states[state]['2nd_vaccination']['vaccinated'] = row[8].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine'] = {}
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = row[9].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[10].value
       states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[11].value
 
       sum_states2nd += states[state]['2nd_vaccination']['vaccinated']
