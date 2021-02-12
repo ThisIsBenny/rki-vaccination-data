@@ -43,7 +43,7 @@ def get_data():
   for row in sheet.iter_rows(max_row=19):
     if row[1].value is None:
       continue
-    state = row[1].value.replace("*", "")
+    state = row[1].value.replace("*", "").strip()
     if state in states:
       states[state]['rs'] = str(row[0].value)
 
