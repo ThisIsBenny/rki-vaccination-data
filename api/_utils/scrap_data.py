@@ -70,6 +70,7 @@ def get_data():
       states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[11].value
       states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = row[12].value
       states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[13].value
+      states[state]['2nd_vaccination']['quote'] = round(row[14].value, 2)
 
       sum_states2nd += states[state]['2nd_vaccination']['vaccinated']
 
