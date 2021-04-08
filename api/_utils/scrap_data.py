@@ -40,7 +40,7 @@ def get_data():
   sum_states2nd = 0
   sum_diff_states = 0
   sum_diff_states2nd = 0
-  for row in sheet.iter_rows(max_row=19):
+  for row in sheet.iter_rows(max_row=20):
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
