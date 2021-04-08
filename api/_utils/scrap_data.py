@@ -66,10 +66,14 @@ def get_data():
       states[state]['2nd_vaccination'] = {}
       states[state]['2nd_vaccination']['vaccinated'] = row[7].value + row[17].value
       states[state]['2nd_vaccination']['vaccinated_by_accine'] = {}
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = row[8].value + row[18].value
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[9].value + row[19].value
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = row[10].value + row[20].value
-      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[11].value + row[21].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = (row[8].value
+      + row[18].value)
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = (row[9].value
+      + row[19].value)
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = (row[10].value
+      + row[20].value)
+      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[11].value
+      + row[21].value)
       states[state]['2nd_vaccination']['quote'] = round(
           states[state]['2nd_vaccination']['vaccinated'] / states[state]['total'] * 100, 2)
 
