@@ -56,7 +56,7 @@ def get_data():
       states[state]['difference_to_the_previous_day'] = row[6].value + row[16].value
       states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated']
         / states[state]['total'] * 1000, 2)
-      # states[state]['quote'] = round(row[8].value, 2)
+      states[state]['quote'] = round(states[state]['vaccinated'] / states[state]['total'] * 100, 2)
 
       sum_states += states[state]['vaccinated']
       sum_diff_states += states[state]['difference_to_the_previous_day']
@@ -70,7 +70,8 @@ def get_data():
       states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[9].value + row[19].value
       states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = row[10].value + row[20].value
       states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[11].value + row[21].value
-      # states[state]['2nd_vaccination']['quote'] = round(row[14].value, 2)
+      states[state]['2nd_vaccination']['quote'] = round(
+          states[state]['2nd_vaccination']['vaccinated'] / states[state]['total'] * 100, 2)
 
       sum_states2nd += states[state]['2nd_vaccination']['vaccinated']
 
