@@ -28,7 +28,7 @@ def get_data():
 
   # Read excel sheet
   work_book = openpyxl.load_workbook(filename = BytesIO(file))
-  sheet = work_book[work_book.sheetnames[1]]
+  sheet = work_book[work_book.sheetnames[2]]
 
   # Load update time
   last_update_raw_string = work_book.sheetnames[1]
