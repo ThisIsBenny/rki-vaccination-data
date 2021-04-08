@@ -48,15 +48,15 @@ def get_data():
       states[state]['rs'] = str(row[0].value)
 
       # First vaccination
-      states[state]['vaccinated'] = row[3].value
+      states[state]['vaccinated'] = row[2].value
       states[state]['vaccinated_by_accine'] = {}
-      states[state]['vaccinated_by_accine']['biontech'] = row[4].value
-      states[state]['vaccinated_by_accine']['moderna'] = row[5].value
-      states[state]['vaccinated_by_accine']['astrazeneca'] = row[6].value
-      states[state]['difference_to_the_previous_day'] = row[7].value
+      states[state]['vaccinated_by_accine']['biontech'] = row[3].value
+      states[state]['vaccinated_by_accine']['moderna'] = row[4].value
+      states[state]['vaccinated_by_accine']['astrazeneca'] = row[5].value
+      states[state]['difference_to_the_previous_day'] = row[6].value
       states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated']
         / states[state]['total'] * 1000, 2)
-      states[state]['quote'] = round(row[8].value, 2)
+      # states[state]['quote'] = round(row[8].value, 2)
 
       sum_states += states[state]['vaccinated']
       sum_diff_states += states[state]['difference_to_the_previous_day']
@@ -64,13 +64,13 @@ def get_data():
 
       # Second vaccination
       states[state]['2nd_vaccination'] = {}
-      states[state]['2nd_vaccination']['vaccinated'] = row[9].value
+      states[state]['2nd_vaccination']['vaccinated'] = row[7].value
       states[state]['2nd_vaccination']['vaccinated_by_accine'] = {}
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = row[10].value
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[11].value
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = row[12].value
-      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[13].value
-      states[state]['2nd_vaccination']['quote'] = round(row[14].value, 2)
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = row[8].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = row[9].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = row[10].value
+      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = row[11].value
+      # states[state]['2nd_vaccination']['quote'] = round(row[14].value, 2)
 
       sum_states2nd += states[state]['2nd_vaccination']['vaccinated']
 
