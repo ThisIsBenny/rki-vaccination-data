@@ -48,12 +48,12 @@ def get_data():
       states[state]['rs'] = str(row[0].value)
 
       # First vaccination
-      states[state]['vaccinated'] = row[2].value + row[12].value
+      states[state]['vaccinated'] = row[2].value + row[13].value
       states[state]['vaccinated_by_accine'] = {}
-      states[state]['vaccinated_by_accine']['biontech'] = row[3].value + row[13].value
-      states[state]['vaccinated_by_accine']['moderna'] = row[4].value + row[14].value
-      states[state]['vaccinated_by_accine']['astrazeneca'] = row[5].value + row[15].value
-      states[state]['difference_to_the_previous_day'] = row[6].value + row[16].value
+      states[state]['vaccinated_by_accine']['biontech'] = row[3].value + row[14].value
+      states[state]['vaccinated_by_accine']['moderna'] = row[4].value + row[15].value
+      states[state]['vaccinated_by_accine']['astrazeneca'] = row[5].value + row[16].value
+      states[state]['difference_to_the_previous_day'] = row[6].value + row[17].value
       states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated']
         / states[state]['total'] * 1000, 2)
       states[state]['quote'] = round(states[state]['vaccinated'] / states[state]['total'] * 100, 2)
@@ -64,16 +64,17 @@ def get_data():
 
       # Second vaccination
       states[state]['2nd_vaccination'] = {}
-      states[state]['2nd_vaccination']['vaccinated'] = row[7].value + row[17].value
+      states[state]['2nd_vaccination']['vaccinated'] = row[7].value + row[18].value
       states[state]['2nd_vaccination']['vaccinated_by_accine'] = {}
       states[state]['2nd_vaccination']['vaccinated_by_accine']['biontech'] = (row[8].value
-      + row[18].value)
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = (row[9].value
       + row[19].value)
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = (row[10].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['moderna'] = (row[9].value
       + row[20].value)
-      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[11].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = (row[10].value
       + row[21].value)
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['janssen'] = (row[11].value)
+      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[12].value
+      + row[22].value)
       states[state]['2nd_vaccination']['quote'] = round(
           states[state]['2nd_vaccination']['vaccinated'] / states[state]['total'] * 100, 2)
 
