@@ -44,6 +44,8 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
 
+    print(state)
+    print(state == 'Impfzentren Bund')
     if state == 'Impfzentren Bund':
       sum_states += row[2].value
       sum_diff_states += row[6].value
