@@ -16,9 +16,8 @@ def get_file():
         ' (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
 
   req = urllib.request.Request(url, headers=hdr)
-  response = urllib.request.urlopen(req)
-
-  return response.read()
+  with urllib.request.urlopen(req) as response:
+    return response.read()
 
 def get_data():
   """ Get Data for API """
@@ -40,10 +39,11 @@ def get_data():
   sum_states2nd = 0
   sum_diff_states = 0
   sum_diff_states2nd = 0
-  for row in sheet.iter_rows(max_row=20):
+  for row in sheet.iter_rows(max_row=21):
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
+
     if state in states:
       states[state]['rs'] = str(row[0].value)
 
@@ -72,9 +72,10 @@ def get_data():
       + row[20].value)
       states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = (row[10].value
       + row[21].value)
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['janssen'] = (row[11].value)
-      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[12].value
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['janssen'] = (row[11].value
       + row[22].value)
+      states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[12].value
+      + row[23].value)
       states[state]['2nd_vaccination']['quote'] = round(
           states[state]['2nd_vaccination']['vaccinated'] / states[state]['total'] * 100, 2)
 
@@ -82,6 +83,12 @@ def get_data():
 
       if states[state]['2nd_vaccination']['difference_to_the_previous_day'] is not None:
         sum_diff_states2nd += states[state]['2nd_vaccination']['difference_to_the_previous_day']
+
+    elif state == 'Impfzentren Bund':
+      sum_states += row[2].value
+      sum_diff_states += row[6].value
+      sum_states2nd += row[7].value
+      sum_diff_states2nd += row[12].value
 
   return {
     "lastUpdate": last_update,
