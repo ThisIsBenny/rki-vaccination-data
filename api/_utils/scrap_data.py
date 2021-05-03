@@ -16,9 +16,8 @@ def get_file():
         ' (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
 
   req = urllib.request.Request(url, headers=hdr)
-  response = urllib.request.urlopen(req)
-
-  return response.read()
+  with urllib.request.urlopen(req) as response:
+    return response.read()
 
 def get_data():
   """ Get Data for API """
@@ -45,7 +44,7 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
 
-    if state is 'Impfzentren Bund':
+    if state == 'Impfzentren Bund':
       sum_states += row[2].value
       sum_diff_states += row[6].value
       sum_states2nd += row[7].value
