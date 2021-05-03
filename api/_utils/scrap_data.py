@@ -72,8 +72,8 @@ def get_data():
       + row[20].value)
       states[state]['2nd_vaccination']['vaccinated_by_accine']['astrazeneca'] = (row[10].value
       + row[21].value)
-      states[state]['2nd_vaccination']['vaccinated_by_accine']['janssen'] = (
-          row[11].value + row[22].value)
+      states[state]['2nd_vaccination']['vaccinated_by_accine']['janssen'] = (row[11].value
+      + row[22].value)
       states[state]['2nd_vaccination']['difference_to_the_previous_day'] = (row[12].value
       + row[23].value)
       states[state]['2nd_vaccination']['quote'] = round(
