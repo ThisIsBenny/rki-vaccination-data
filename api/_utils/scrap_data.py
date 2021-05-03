@@ -89,7 +89,7 @@ def get_data():
       sum_diff_states += row[6].value
       sum_states2nd += row[7].value
       sum_diff_states2nd += row[12].value
-    
+
   return {
     "lastUpdate": last_update,
     "states": states,
