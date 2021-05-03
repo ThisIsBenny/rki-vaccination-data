@@ -44,12 +44,7 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
 
-    if state == 'Impfzentren Bund':
-      sum_states += row[2].value
-      sum_diff_states += row[6].value
-      sum_states2nd += row[7].value
-      sum_diff_states2nd += row[12].value
-    elif state in states:
+    if state in states:
       states[state]['rs'] = str(row[0].value)
 
       # First vaccination
@@ -89,6 +84,12 @@ def get_data():
       if states[state]['2nd_vaccination']['difference_to_the_previous_day'] is not None:
         sum_diff_states2nd += states[state]['2nd_vaccination']['difference_to_the_previous_day']
 
+    elif state == 'Impfzentren Bund':
+      sum_states += row[2].value
+      sum_diff_states += row[6].value
+      sum_states2nd += row[7].value
+      sum_diff_states2nd += row[12].value
+    
   return {
     "lastUpdate": last_update,
     "states": states,
