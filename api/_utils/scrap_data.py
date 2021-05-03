@@ -44,7 +44,13 @@ def get_data():
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
-    if state in states:
+
+    if state is 'Impfzentren Bund':
+      sum_states += row[2].value
+      sum_diff_states += row[6].value
+      sum_states2nd += row[7].value
+      sum_diff_states2nd += row[12].value
+    elif state in states:
       states[state]['rs'] = str(row[0].value)
 
       # First vaccination
