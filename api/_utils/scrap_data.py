@@ -90,12 +90,12 @@ def get_data():
       sum_states2nd += row[8].value
       sum_diff_states2nd += row[13].value
 
-    return {
-      "lastUpdate": last_update,
-      "states": states,
-      "sumStates": sum_states,
-      "sumStates2nd": sum_states2nd,
-      "sumDiffStates": sum_diff_states,
-      "sumDiffStates2nd": sum_diff_states2nd,
-      "totalGermany": inhabitants.TOTAL
-    }
+  return {
+    "lastUpdate": last_update,
+    "states": states,
+    "sumStates": sum_states,
+    "sumStates2nd": sum_states2nd,
+    "sumDiffStates": sum_diff_states,
+    "sumDiffStates2nd": sum_diff_states2nd,
+    "totalGermany": inhabitants.TOTAL
+  }
