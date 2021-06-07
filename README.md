@@ -345,3 +345,9 @@ The API Code is Open-Source
 * [https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquoten-Tab.html)
 
 Licence: Robert Koch-Institut (RKI), dl-de/by-2-0
+
+# Apps / websites that use the API
+
+* [Number of Covid 19 vaccinations](https://widget-hub.app/widget/5fec48637b99ef0008e8a27d/number-of-covid-19-vaccinations) (iOS Scriptable Widget)
+* [Impf-Status in Deutschland](https://play.google.com/store/apps/details?id=de.dschlapa.vaccination) (Android)
+* [Hotspot or not?](https://hotspotornot.de/)
