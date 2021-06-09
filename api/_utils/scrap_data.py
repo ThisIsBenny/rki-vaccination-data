@@ -57,7 +57,7 @@ def get_data():
       states[state]['vaccinated_by_accine']['biontech'] = row[3].value
       states[state]['vaccinated_by_accine']['moderna'] = row[4].value
       states[state]['vaccinated_by_accine']['astrazeneca'] = row[5].value
-      states[state]['vaccinated_by_accine']['janssen'] = row[6].value
+      # states[state]['vaccinated_by_accine']['janssen'] = row[6].value
       states[state]['difference_to_the_previous_day'] = row[7].value
       states[state]['vaccinations_per_1000_inhabitants'] = round(states[state]['vaccinated']
                                                                 / states[state]['total'] * 1000, 2)
