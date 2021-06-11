@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 import pytz
 # pylint: disable=import-error
-from _utils import scrap_data_v2
+from api._utils import scrap_data_v2
 
 try:
   data = scrap_data_v2.get_data()
