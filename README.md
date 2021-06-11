@@ -687,7 +687,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "name": "Bundesressorts",
     "inhabitants": 0,
     "isState": false,
-    "rs": "None",
+    "rs": "",
     "vaccinatedAtLeastOnce": {
       "doses": 135585,
       "quote": 0,
@@ -728,7 +728,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "name": "Deutschland",
     "inhabitants": 83166711,
     "isState": false,
-    "rs": "None",
+    "rs": "",
     "vaccinatedAtLeastOnce": {
       "doses": 39539170,
       "quote": 47.54,
