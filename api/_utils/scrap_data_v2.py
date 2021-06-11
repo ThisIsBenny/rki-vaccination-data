@@ -42,7 +42,7 @@ def get_data():
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
-    if state in (inhabitants.STATES + ['Bundesressorts', 'Gesamt']):
+    if state in inhabitants.STATES or state in ['Bundesressorts', 'Gesamt']:
       if state == 'Bundesressorts':
         total = 0
       elif state == 'Gesamt':
