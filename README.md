@@ -19,7 +19,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
 ### Endpoint
 
 ```
-  GET https://rki-vaccination-data.vercel.app/api
+  GET https://rki-vaccination-data.vercel.app/api/v2
 ```
 
 ### Response
