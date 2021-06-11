@@ -26,275 +26,728 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
 
 ```json
 {
-  "lastUpdate": "2021-01-18T00:00:00",
-  "states": {
-    "Baden-Württemberg": {
-      "total": 11100394,
-      "rs": "08",
-      "vaccinated": 122057,
-      "vaccinated_by_accine": {
-        "biontech": 121737,
-        "moderna": 320
-      },
-      "difference_to_the_previous_day": 7354,
-      "vaccinations_per_1000_inhabitants": 11.0,
-      "quote": 1.1,
-      "2nd_vaccination": {
-        "vaccinated": 4457,
-        "difference_to_the_previous_day": 1953
-      }
+  "lastUpdate": "2021-06-10T00:00:00",
+  "data": [{
+    "name": "Baden-Württemberg",
+    "inhabitants": 11100394,
+    "rs": "08",
+    "vaccinatedAtLeastOnce": {
+      "doses": 5162993,
+      "quote": 46.51,
+      "difference_to_the_previous_day": 54493,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 3458328
+      }, {
+        "name": "moderna",
+        "doses": 443518
+      }, {
+        "name": "astrazeneca",
+        "doses": 1129631
+      }, {
+        "name": "janssen",
+        "doses": 131516
+      }]
     },
-    "Bayern": {
-      "total": 13124737,
-      "rs": "09",
-      "vaccinated": 220318,
-      "vaccinated_by_accine": {
-        "biontech": 213624,
-        "moderna": 6694
-      },
-      "difference_to_the_previous_day": 6481,
-      "vaccinations_per_1000_inhabitants": 16.79,
-      "quote": 1.68,
-      "2nd_vaccination": {
-        "vaccinated": 419,
-        "difference_to_the_previous_day": 419
-      }
-    },
-    "Berlin": {
-      "total": 3669491,
-      "rs": "11",
-      "vaccinated": 55134,
-      "vaccinated_by_accine": {
-        "biontech": 54499,
-        "moderna": 635
-      },
-      "difference_to_the_previous_day": 2512,
-      "vaccinations_per_1000_inhabitants": 15.02,
-      "quote": 1.5,
-      "2nd_vaccination": {
-        "vaccinated": 4138,
-        "difference_to_the_previous_day": 2205
-      }
-    },
-    "Brandenburg": {
-      "total": 2521893,
-      "rs": "12",
-      "vaccinated": 41094,
-      "vaccinated_by_accine": {
-        "biontech": 41094,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 2620,
-      "vaccinations_per_1000_inhabitants": 16.29,
-      "quote": 1.63,
-      "2nd_vaccination": {
-        "vaccinated": 0,
-        "difference_to_the_previous_day": 0
-      }
-    },
-    "Bremen": {
-      "total": 681202,
-      "rs": "04",
-      "vaccinated": 12866,
-      "vaccinated_by_accine": {
-        "biontech": 12433,
-        "moderna": 433
-      },
-      "difference_to_the_previous_day": 614,
-      "vaccinations_per_1000_inhabitants": 18.89,
-      "quote": 1.89,
-      "2nd_vaccination": {
-        "vaccinated": 390,
-        "difference_to_the_previous_day": 318
-      }
-    },
-    "Hamburg": {
-      "total": 1847253,
-      "rs": "02",
-      "vaccinated": 26517,
-      "vaccinated_by_accine": {
-        "biontech": 26362,
-        "moderna": 155
-      },
-      "difference_to_the_previous_day": 1945,
-      "vaccinations_per_1000_inhabitants": 14.35,
-      "quote": 1.44,
-      "2nd_vaccination": {
-        "vaccinated": 598,
-        "difference_to_the_previous_day": 174
-      }
-    },
-    "Hessen": {
-      "total": 6288080,
-      "rs": "06",
-      "vaccinated": 74071,
-      "vaccinated_by_accine": {
-        "biontech": 74071,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 1255,
-      "vaccinations_per_1000_inhabitants": 11.78,
-      "quote": 1.18,
-      "2nd_vaccination": {
-        "vaccinated": 3000,
-        "difference_to_the_previous_day": 1264
-      }
-    },
-    "Mecklenburg-Vorpommern": {
-      "total": 1608138,
-      "rs": "13",
-      "vaccinated": 39116,
-      "vaccinated_by_accine": {
-        "biontech": 38745,
-        "moderna": 371
-      },
-      "difference_to_the_previous_day": 1420,
-      "vaccinations_per_1000_inhabitants": 24.32,
-      "quote": 2.43,
-      "2nd_vaccination": {
-        "vaccinated": 1157,
-        "difference_to_the_previous_day": 1157
-      }
-    },
-    "Niedersachsen": {
-      "total": 7993608,
-      "rs": "03",
-      "vaccinated": 94116,
-      "vaccinated_by_accine": {
-        "biontech": 92738,
-        "moderna": 1378
-      },
-      "difference_to_the_previous_day": 3546,
-      "vaccinations_per_1000_inhabitants": 11.77,
-      "quote": 1.18,
-      "2nd_vaccination": {
-        "vaccinated": 837,
-        "difference_to_the_previous_day": 473
-      }
-    },
-    "Nordrhein-Westfalen": {
-      "total": 17947221,
-      "rs": "05",
-      "vaccinated": 218699,
-      "vaccinated_by_accine": {
-        "biontech": 218699,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 2360,
-      "vaccinations_per_1000_inhabitants": 12.19,
-      "quote": 1.22,
-      "2nd_vaccination": {
-        "vaccinated": 4593,
-        "difference_to_the_previous_day": 1722
-      }
-    },
-    "Rheinland-Pfalz": {
-      "total": 4093903,
-      "rs": "07",
-      "vaccinated": 91423,
-      "vaccinated_by_accine": {
-        "biontech": 89129,
-        "moderna": 2294
-      },
-      "difference_to_the_previous_day": 7496,
-      "vaccinations_per_1000_inhabitants": 22.33,
-      "quote": 2.23,
-      "2nd_vaccination": {
-        "vaccinated": 1196,
-        "difference_to_the_previous_day": null
-      }
-    },
-    "Saarland": {
-      "total": 986887,
-      "rs": "10",
-      "vaccinated": 16957,
-      "vaccinated_by_accine": {
-        "biontech": 16957,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 1246,
-      "vaccinations_per_1000_inhabitants": 17.18,
-      "quote": 1.72,
-      "2nd_vaccination": {
-        "vaccinated": 0,
-        "difference_to_the_previous_day": 0
-      }
-    },
-    "Sachsen": {
-      "total": 4071971,
-      "rs": "14",
-      "vaccinated": 53663,
-      "vaccinated_by_accine": {
-        "biontech": 53663,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 3661,
-      "vaccinations_per_1000_inhabitants": 13.18,
-      "quote": 1.32,
-      "2nd_vaccination": {
-        "vaccinated": 368,
-        "difference_to_the_previous_day": null
-      }
-    },
-    "Sachsen-Anhalt": {
-      "total": 2194782,
-      "rs": "15",
-      "vaccinated": 34411,
-      "vaccinated_by_accine": {
-        "biontech": 34411,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 1263,
-      "vaccinations_per_1000_inhabitants": 15.68,
-      "quote": 1.57,
-      "2nd_vaccination": {
-        "vaccinated": 2927,
-        "difference_to_the_previous_day": 2248
-      }
-    },
-    "Schleswig-Holstein": {
-      "total": 2903773,
-      "rs": "01",
-      "vaccinated": 69126,
-      "vaccinated_by_accine": {
-        "biontech": 69076,
-        "moderna": 50
-      },
-      "difference_to_the_previous_day": 3277,
-      "vaccinations_per_1000_inhabitants": 23.81,
-      "quote": 2.38,
-      "2nd_vaccination": {
-        "vaccinated": 640,
-        "difference_to_the_previous_day": 640
-      }
-    },
-    "Thüringen": {
-      "total": 2133378,
-      "rs": "16",
-      "vaccinated": 25975,
-      "vaccinated_by_accine": {
-        "biontech": 25975,
-        "moderna": 0
-      },
-      "difference_to_the_previous_day": 2239,
-      "vaccinations_per_1000_inhabitants": 12.18,
-      "quote": 1.22,
-      "2nd_vaccination": {
-        "vaccinated": 21,
-        "difference_to_the_previous_day": 21
-      }
+    "fullyVaccinated": {
+      "doses": 2679782,
+      "quote": 24.14,
+      "difference_to_the_previous_day": 105744,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 2171831
+      }, {
+        "name": "moderna",
+        "doses": 211981
+      }, {
+        "name": "astrazeneca",
+        "doses": 164454
+      }, {
+        "name": "janssen",
+        "doses": 131516
+      }]
     }
-  },
-  "vaccinated": 1195543,
-  "2nd_vaccination": {
-    "vaccinated": 24741,
-    "difference_to_the_previous_day": 12594
-  },
-  "sum_vaccine_doses": 1220284,
-  "difference_to_the_previous_day": 49289,
-  "vaccinations_per_1000_inhabitants": 14.38,
-  "total": 83166711,
-  "quote": 1.44
+  }, {
+    "name": "Bayern",
+    "inhabitants": 13124737,
+    "rs": "09",
+    "vaccinatedAtLeastOnce": {
+      "doses": 5997556,
+      "quote": 45.7,
+      "difference_to_the_previous_day": 50791,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 4160449
+      }, {
+        "name": "moderna",
+        "doses": 406212
+      }, {
+        "name": "astrazeneca",
+        "doses": 1288901
+      }, {
+        "name": "janssen",
+        "doses": 141994
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 3266743,
+      "quote": 24.89,
+      "difference_to_the_previous_day": 123492,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 2683410
+      }, {
+        "name": "moderna",
+        "doses": 257641
+      }, {
+        "name": "astrazeneca",
+        "doses": 183698
+      }, {
+        "name": "janssen",
+        "doses": 141994
+      }]
+    }
+  }, {
+    "name": "Berlin",
+    "inhabitants": 3669491,
+    "rs": "11",
+    "vaccinatedAtLeastOnce": {
+      "doses": 1748925,
+      "quote": 47.66,
+      "difference_to_the_previous_day": 21612,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1173163
+      }, {
+        "name": "moderna",
+        "doses": 184189
+      }, {
+        "name": "astrazeneca",
+        "doses": 348119
+      }, {
+        "name": "janssen",
+        "doses": 43454
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 863354,
+      "quote": 23.53,
+      "difference_to_the_previous_day": 29028,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 714850
+      }, {
+        "name": "moderna",
+        "doses": 71379
+      }, {
+        "name": "astrazeneca",
+        "doses": 33671
+      }, {
+        "name": "janssen",
+        "doses": 43454
+      }]
+    }
+  }, {
+    "name": "Brandenburg",
+    "inhabitants": 2521893,
+    "rs": "12",
+    "vaccinatedAtLeastOnce": {
+      "doses": 1148445,
+      "quote": 45.54,
+      "difference_to_the_previous_day": 23288,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 766860
+      }, {
+        "name": "moderna",
+        "doses": 98322
+      }, {
+        "name": "astrazeneca",
+        "doses": 243246
+      }, {
+        "name": "janssen",
+        "doses": 40017
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 605625,
+      "quote": 24.01,
+      "difference_to_the_previous_day": 19476,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 477478
+      }, {
+        "name": "moderna",
+        "doses": 53359
+      }, {
+        "name": "astrazeneca",
+        "doses": 34771
+      }, {
+        "name": "janssen",
+        "doses": 40017
+      }]
+    }
+  }, {
+    "name": "Bremen",
+    "inhabitants": 681202,
+    "rs": "04",
+    "vaccinatedAtLeastOnce": {
+      "doses": 354840,
+      "quote": 52.09,
+      "difference_to_the_previous_day": 5815,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 224174
+      }, {
+        "name": "moderna",
+        "doses": 21549
+      }, {
+        "name": "astrazeneca",
+        "doses": 94450
+      }, {
+        "name": "janssen",
+        "doses": 14667
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 187163,
+      "quote": 27.48,
+      "difference_to_the_previous_day": 5294,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 149527
+      }, {
+        "name": "moderna",
+        "doses": 13728
+      }, {
+        "name": "astrazeneca",
+        "doses": 9241
+      }, {
+        "name": "janssen",
+        "doses": 14667
+      }]
+    }
+  }, {
+    "name": "Hamburg",
+    "inhabitants": 1847253,
+    "rs": "02",
+    "vaccinatedAtLeastOnce": {
+      "doses": 825353,
+      "quote": 44.68,
+      "difference_to_the_previous_day": 8959,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 542067
+      }, {
+        "name": "moderna",
+        "doses": 80893
+      }, {
+        "name": "astrazeneca",
+        "doses": 176029
+      }, {
+        "name": "janssen",
+        "doses": 26364
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 437952,
+      "quote": 23.71,
+      "difference_to_the_previous_day": 17014,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 353002
+      }, {
+        "name": "moderna",
+        "doses": 48522
+      }, {
+        "name": "astrazeneca",
+        "doses": 10064
+      }, {
+        "name": "janssen",
+        "doses": 26364
+      }]
+    }
+  }, {
+    "name": "Hessen",
+    "inhabitants": 6288080,
+    "rs": "06",
+    "vaccinatedAtLeastOnce": {
+      "doses": 2967688,
+      "quote": 47.2,
+      "difference_to_the_previous_day": 26924,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1982634
+      }, {
+        "name": "moderna",
+        "doses": 231673
+      }, {
+        "name": "astrazeneca",
+        "doses": 688018
+      }, {
+        "name": "janssen",
+        "doses": 65363
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 1395446,
+      "quote": 22.19,
+      "difference_to_the_previous_day": 56931,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1132737
+      }, {
+        "name": "moderna",
+        "doses": 91533
+      }, {
+        "name": "astrazeneca",
+        "doses": 105813
+      }, {
+        "name": "janssen",
+        "doses": 65363
+      }]
+    }
+  }, {
+    "name": "Mecklenburg-Vorpommern",
+    "inhabitants": 1608138,
+    "rs": "13",
+    "vaccinatedAtLeastOnce": {
+      "doses": 785489,
+      "quote": 48.84,
+      "difference_to_the_previous_day": 8589,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 560146
+      }, {
+        "name": "moderna",
+        "doses": 63599
+      }, {
+        "name": "astrazeneca",
+        "doses": 142080
+      }, {
+        "name": "janssen",
+        "doses": 19664
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 429517,
+      "quote": 26.71,
+      "difference_to_the_previous_day": 20498,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 364389
+      }, {
+        "name": "moderna",
+        "doses": 28337
+      }, {
+        "name": "astrazeneca",
+        "doses": 17127
+      }, {
+        "name": "janssen",
+        "doses": 19664
+      }]
+    }
+  }, {
+    "name": "Niedersachsen",
+    "inhabitants": 7993608,
+    "rs": "03",
+    "vaccinatedAtLeastOnce": {
+      "doses": 3865057,
+      "quote": 48.35,
+      "difference_to_the_previous_day": 41865,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 2403169
+      }, {
+        "name": "moderna",
+        "doses": 236562
+      }, {
+        "name": "astrazeneca",
+        "doses": 1059786
+      }, {
+        "name": "janssen",
+        "doses": 165540
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 1911217,
+      "quote": 23.91,
+      "difference_to_the_previous_day": 83860,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1513838
+      }, {
+        "name": "moderna",
+        "doses": 156927
+      }, {
+        "name": "astrazeneca",
+        "doses": 74912
+      }, {
+        "name": "janssen",
+        "doses": 165540
+      }]
+    }
+  }, {
+    "name": "Nordrhein-Westfalen",
+    "inhabitants": 17947221,
+    "rs": "05",
+    "vaccinatedAtLeastOnce": {
+      "doses": 8981678,
+      "quote": 50.04,
+      "difference_to_the_previous_day": 75307,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 5900753
+      }, {
+        "name": "moderna",
+        "doses": 649639
+      }, {
+        "name": "astrazeneca",
+        "doses": 2142432
+      }, {
+        "name": "janssen",
+        "doses": 288854
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 4603066,
+      "quote": 25.65,
+      "difference_to_the_previous_day": 167665,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 3860158
+      }, {
+        "name": "moderna",
+        "doses": 263053
+      }, {
+        "name": "astrazeneca",
+        "doses": 191001
+      }, {
+        "name": "janssen",
+        "doses": 288854
+      }]
+    }
+  }, {
+    "name": "Rheinland-Pfalz",
+    "inhabitants": 4093903,
+    "rs": "07",
+    "vaccinatedAtLeastOnce": {
+      "doses": 1912371,
+      "quote": 46.71,
+      "difference_to_the_previous_day": 26711,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1286009
+      }, {
+        "name": "moderna",
+        "doses": 168833
+      }, {
+        "name": "astrazeneca",
+        "doses": 408676
+      }, {
+        "name": "janssen",
+        "doses": 48853
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 1016635,
+      "quote": 24.83,
+      "difference_to_the_previous_day": 29445,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 858066
+      }, {
+        "name": "moderna",
+        "doses": 55760
+      }, {
+        "name": "astrazeneca",
+        "doses": 53956
+      }, {
+        "name": "janssen",
+        "doses": 48853
+      }]
+    }
+  }, {
+    "name": "Saarland",
+    "inhabitants": 986887,
+    "rs": "10",
+    "vaccinatedAtLeastOnce": {
+      "doses": 502948,
+      "quote": 50.96,
+      "difference_to_the_previous_day": 5962,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 376290
+      }, {
+        "name": "moderna",
+        "doses": 36157
+      }, {
+        "name": "astrazeneca",
+        "doses": 78632
+      }, {
+        "name": "janssen",
+        "doses": 11869
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 289544,
+      "quote": 29.34,
+      "difference_to_the_previous_day": 10794,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 250920
+      }, {
+        "name": "moderna",
+        "doses": 16011
+      }, {
+        "name": "astrazeneca",
+        "doses": 10744
+      }, {
+        "name": "janssen",
+        "doses": 11869
+      }]
+    }
+  }, {
+    "name": "Sachsen",
+    "inhabitants": 4071971,
+    "rs": "14",
+    "vaccinatedAtLeastOnce": {
+      "doses": 1736798,
+      "quote": 42.65,
+      "difference_to_the_previous_day": 23409,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 1194663
+      }, {
+        "name": "moderna",
+        "doses": 161736
+      }, {
+        "name": "astrazeneca",
+        "doses": 336326
+      }, {
+        "name": "janssen",
+        "doses": 44073
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 1067551,
+      "quote": 26.22,
+      "difference_to_the_previous_day": 25766,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 898957
+      }, {
+        "name": "moderna",
+        "doses": 81087
+      }, {
+        "name": "astrazeneca",
+        "doses": 43434
+      }, {
+        "name": "janssen",
+        "doses": 44073
+      }]
+    }
+  }, {
+    "name": "Sachsen-Anhalt",
+    "inhabitants": 2194782,
+    "rs": "15",
+    "vaccinatedAtLeastOnce": {
+      "doses": 985654,
+      "quote": 44.91,
+      "difference_to_the_previous_day": 13588,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 677695
+      }, {
+        "name": "moderna",
+        "doses": 85185
+      }, {
+        "name": "astrazeneca",
+        "doses": 184491
+      }, {
+        "name": "janssen",
+        "doses": 38283
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 540620,
+      "quote": 24.63,
+      "difference_to_the_previous_day": 19655,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 430185
+      }, {
+        "name": "moderna",
+        "doses": 46119
+      }, {
+        "name": "astrazeneca",
+        "doses": 26033
+      }, {
+        "name": "janssen",
+        "doses": 38283
+      }]
+    }
+  }, {
+    "name": "Schleswig-Holstein",
+    "inhabitants": 2903773,
+    "rs": "01",
+    "vaccinatedAtLeastOnce": {
+      "doses": 1453333,
+      "quote": 50.05,
+      "difference_to_the_previous_day": 21580,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 984112
+      }, {
+        "name": "moderna",
+        "doses": 101284
+      }, {
+        "name": "astrazeneca",
+        "doses": 324245
+      }, {
+        "name": "janssen",
+        "doses": 43692
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 757298,
+      "quote": 26.08,
+      "difference_to_the_previous_day": 22415,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 612893
+      }, {
+        "name": "moderna",
+        "doses": 57750
+      }, {
+        "name": "astrazeneca",
+        "doses": 42963
+      }, {
+        "name": "janssen",
+        "doses": 43692
+      }]
+    }
+  }, {
+    "name": "Thüringen",
+    "inhabitants": 2133378,
+    "rs": "16",
+    "vaccinatedAtLeastOnce": {
+      "doses": 974457,
+      "quote": 45.68,
+      "difference_to_the_previous_day": 10321,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 679316
+      }, {
+        "name": "moderna",
+        "doses": 112873
+      }, {
+        "name": "astrazeneca",
+        "doses": 161076
+      }, {
+        "name": "janssen",
+        "doses": 21192
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 534526,
+      "quote": 25.06,
+      "difference_to_the_previous_day": 17225,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 448856
+      }, {
+        "name": "moderna",
+        "doses": 32616
+      }, {
+        "name": "astrazeneca",
+        "doses": 31862
+      }, {
+        "name": "janssen",
+        "doses": 21192
+      }]
+    }
+  }, {
+    "name": "Bundesressorts",
+    "inhabitants": 0,
+    "rs": "None",
+    "vaccinatedAtLeastOnce": {
+      "doses": 135585,
+      "quote": 0,
+      "difference_to_the_previous_day": 6622,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 39751
+      }, {
+        "name": "moderna",
+        "doses": 73836
+      }, {
+        "name": "astrazeneca",
+        "doses": 18293
+      }, {
+        "name": "janssen",
+        "doses": 3705
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 62422,
+      "quote": 0,
+      "difference_to_the_previous_day": 2140,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 2038
+      }, {
+        "name": "moderna",
+        "doses": 50093
+      }, {
+        "name": "astrazeneca",
+        "doses": 6586
+      }, {
+        "name": "janssen",
+        "doses": 3705
+      }]
+    }
+  }, {
+    "name": "Deutschland",
+    "inhabitants": 83166711,
+    "rs": "None",
+    "vaccinatedAtLeastOnce": {
+      "doses": 39539170,
+      "quote": 47.54,
+      "difference_to_the_previous_day": 425836,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 26409579
+      }, {
+        "name": "moderna",
+        "doses": 3156060
+      }, {
+        "name": "astrazeneca",
+        "doses": 8824431
+      }, {
+        "name": "janssen",
+        "doses": 1149100
+      }]
+    },
+    "fullyVaccinated": {
+      "doses": 20648461,
+      "quote": 24.83,
+      "difference_to_the_previous_day": 756442,
+      "vaccine": [{
+        "name": "biontech",
+        "doses": 16923135
+      }, {
+        "name": "moderna",
+        "doses": 1535896
+      }, {
+        "name": "astrazeneca",
+        "doses": 1040330
+      }, {
+        "name": "janssen",
+        "doses": 1149100
+      }]
+    }
+  }]
 }
 ```
 
@@ -303,14 +756,14 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   cURL:
 
   ```sh
-    curl -X GET 'https://rki-vaccination-data.vercel.app/api'
+    curl -X GET 'https://rki-vaccination-data.vercel.app/api/v2'
   ```
 
   jQuery:
 
   ```javascript
     var settings = {
-      "url": "https://rki-vaccination-data.vercel.app/api",
+      "url": "https://rki-vaccination-data.vercel.app/api/v2",
       "method": "GET"
     };
 
@@ -322,7 +775,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   Scriptable App:
 
   ```javascript
-    const req = new Request('https://rki-vaccination-data.vercel.app/api')
+    const req = new Request('https://rki-vaccination-data.vercel.app/api/v2')
     const res = await req.loadJSON()
     console.log(res)
   ```
@@ -333,11 +786,11 @@ The API Code is Open-Source
 
 ## API Interface
 
-<<< @/api/index.py
+<<< @/api/v2.py
 
 ## Scrapping Data
 
-<<< @/api/_utils/scrap_data.py
+<<< @/api/_utils/scrap_data_v2.py
 
 # Data-Sources
 
