@@ -30,11 +30,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   "data": [{
     "name": "Baden-Württemberg",
     "inhabitants": 11100394,
+    "isState": true,
     "rs": "08",
     "vaccinatedAtLeastOnce": {
       "doses": 5162993,
       "quote": 46.51,
-      "difference_to_the_previous_day": 54493,
+      "differenceToThePreviousDay": 54493,
       "vaccine": [{
         "name": "biontech",
         "doses": 3458328
@@ -52,7 +53,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 2679782,
       "quote": 24.14,
-      "difference_to_the_previous_day": 105744,
+      "differenceToThePreviousDay": 105744,
       "vaccine": [{
         "name": "biontech",
         "doses": 2171831
@@ -70,11 +71,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Bayern",
     "inhabitants": 13124737,
+    "isState": true,
     "rs": "09",
     "vaccinatedAtLeastOnce": {
       "doses": 5997556,
       "quote": 45.7,
-      "difference_to_the_previous_day": 50791,
+      "differenceToThePreviousDay": 50791,
       "vaccine": [{
         "name": "biontech",
         "doses": 4160449
@@ -92,7 +94,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 3266743,
       "quote": 24.89,
-      "difference_to_the_previous_day": 123492,
+      "differenceToThePreviousDay": 123492,
       "vaccine": [{
         "name": "biontech",
         "doses": 2683410
@@ -110,11 +112,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Berlin",
     "inhabitants": 3669491,
+    "isState": true,
     "rs": "11",
     "vaccinatedAtLeastOnce": {
       "doses": 1748925,
       "quote": 47.66,
-      "difference_to_the_previous_day": 21612,
+      "differenceToThePreviousDay": 21612,
       "vaccine": [{
         "name": "biontech",
         "doses": 1173163
@@ -132,7 +135,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 863354,
       "quote": 23.53,
-      "difference_to_the_previous_day": 29028,
+      "differenceToThePreviousDay": 29028,
       "vaccine": [{
         "name": "biontech",
         "doses": 714850
@@ -150,11 +153,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Brandenburg",
     "inhabitants": 2521893,
+    "isState": true,
     "rs": "12",
     "vaccinatedAtLeastOnce": {
       "doses": 1148445,
       "quote": 45.54,
-      "difference_to_the_previous_day": 23288,
+      "differenceToThePreviousDay": 23288,
       "vaccine": [{
         "name": "biontech",
         "doses": 766860
@@ -172,7 +176,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 605625,
       "quote": 24.01,
-      "difference_to_the_previous_day": 19476,
+      "differenceToThePreviousDay": 19476,
       "vaccine": [{
         "name": "biontech",
         "doses": 477478
@@ -190,11 +194,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Bremen",
     "inhabitants": 681202,
+    "isState": true,
     "rs": "04",
     "vaccinatedAtLeastOnce": {
       "doses": 354840,
       "quote": 52.09,
-      "difference_to_the_previous_day": 5815,
+      "differenceToThePreviousDay": 5815,
       "vaccine": [{
         "name": "biontech",
         "doses": 224174
@@ -212,7 +217,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 187163,
       "quote": 27.48,
-      "difference_to_the_previous_day": 5294,
+      "differenceToThePreviousDay": 5294,
       "vaccine": [{
         "name": "biontech",
         "doses": 149527
@@ -230,11 +235,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Hamburg",
     "inhabitants": 1847253,
+    "isState": true,
     "rs": "02",
     "vaccinatedAtLeastOnce": {
       "doses": 825353,
       "quote": 44.68,
-      "difference_to_the_previous_day": 8959,
+      "differenceToThePreviousDay": 8959,
       "vaccine": [{
         "name": "biontech",
         "doses": 542067
@@ -252,7 +258,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 437952,
       "quote": 23.71,
-      "difference_to_the_previous_day": 17014,
+      "differenceToThePreviousDay": 17014,
       "vaccine": [{
         "name": "biontech",
         "doses": 353002
@@ -270,11 +276,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Hessen",
     "inhabitants": 6288080,
+    "isState": true,
     "rs": "06",
     "vaccinatedAtLeastOnce": {
       "doses": 2967688,
       "quote": 47.2,
-      "difference_to_the_previous_day": 26924,
+      "differenceToThePreviousDay": 26924,
       "vaccine": [{
         "name": "biontech",
         "doses": 1982634
@@ -292,7 +299,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 1395446,
       "quote": 22.19,
-      "difference_to_the_previous_day": 56931,
+      "differenceToThePreviousDay": 56931,
       "vaccine": [{
         "name": "biontech",
         "doses": 1132737
@@ -310,11 +317,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Mecklenburg-Vorpommern",
     "inhabitants": 1608138,
+    "isState": true,
     "rs": "13",
     "vaccinatedAtLeastOnce": {
       "doses": 785489,
       "quote": 48.84,
-      "difference_to_the_previous_day": 8589,
+      "differenceToThePreviousDay": 8589,
       "vaccine": [{
         "name": "biontech",
         "doses": 560146
@@ -332,7 +340,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 429517,
       "quote": 26.71,
-      "difference_to_the_previous_day": 20498,
+      "differenceToThePreviousDay": 20498,
       "vaccine": [{
         "name": "biontech",
         "doses": 364389
@@ -350,11 +358,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Niedersachsen",
     "inhabitants": 7993608,
+    "isState": true,
     "rs": "03",
     "vaccinatedAtLeastOnce": {
       "doses": 3865057,
       "quote": 48.35,
-      "difference_to_the_previous_day": 41865,
+      "differenceToThePreviousDay": 41865,
       "vaccine": [{
         "name": "biontech",
         "doses": 2403169
@@ -372,7 +381,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 1911217,
       "quote": 23.91,
-      "difference_to_the_previous_day": 83860,
+      "differenceToThePreviousDay": 83860,
       "vaccine": [{
         "name": "biontech",
         "doses": 1513838
@@ -390,11 +399,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Nordrhein-Westfalen",
     "inhabitants": 17947221,
+    "isState": true,
     "rs": "05",
     "vaccinatedAtLeastOnce": {
       "doses": 8981678,
       "quote": 50.04,
-      "difference_to_the_previous_day": 75307,
+      "differenceToThePreviousDay": 75307,
       "vaccine": [{
         "name": "biontech",
         "doses": 5900753
@@ -412,7 +422,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 4603066,
       "quote": 25.65,
-      "difference_to_the_previous_day": 167665,
+      "differenceToThePreviousDay": 167665,
       "vaccine": [{
         "name": "biontech",
         "doses": 3860158
@@ -430,11 +440,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Rheinland-Pfalz",
     "inhabitants": 4093903,
+    "isState": true,
     "rs": "07",
     "vaccinatedAtLeastOnce": {
       "doses": 1912371,
       "quote": 46.71,
-      "difference_to_the_previous_day": 26711,
+      "differenceToThePreviousDay": 26711,
       "vaccine": [{
         "name": "biontech",
         "doses": 1286009
@@ -452,7 +463,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 1016635,
       "quote": 24.83,
-      "difference_to_the_previous_day": 29445,
+      "differenceToThePreviousDay": 29445,
       "vaccine": [{
         "name": "biontech",
         "doses": 858066
@@ -470,11 +481,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Saarland",
     "inhabitants": 986887,
+    "isState": true,
     "rs": "10",
     "vaccinatedAtLeastOnce": {
       "doses": 502948,
       "quote": 50.96,
-      "difference_to_the_previous_day": 5962,
+      "differenceToThePreviousDay": 5962,
       "vaccine": [{
         "name": "biontech",
         "doses": 376290
@@ -492,7 +504,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 289544,
       "quote": 29.34,
-      "difference_to_the_previous_day": 10794,
+      "differenceToThePreviousDay": 10794,
       "vaccine": [{
         "name": "biontech",
         "doses": 250920
@@ -510,11 +522,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Sachsen",
     "inhabitants": 4071971,
+    "isState": true,
     "rs": "14",
     "vaccinatedAtLeastOnce": {
       "doses": 1736798,
       "quote": 42.65,
-      "difference_to_the_previous_day": 23409,
+      "differenceToThePreviousDay": 23409,
       "vaccine": [{
         "name": "biontech",
         "doses": 1194663
@@ -532,7 +545,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 1067551,
       "quote": 26.22,
-      "difference_to_the_previous_day": 25766,
+      "differenceToThePreviousDay": 25766,
       "vaccine": [{
         "name": "biontech",
         "doses": 898957
@@ -550,11 +563,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Sachsen-Anhalt",
     "inhabitants": 2194782,
+    "isState": true,
     "rs": "15",
     "vaccinatedAtLeastOnce": {
       "doses": 985654,
       "quote": 44.91,
-      "difference_to_the_previous_day": 13588,
+      "differenceToThePreviousDay": 13588,
       "vaccine": [{
         "name": "biontech",
         "doses": 677695
@@ -572,7 +586,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 540620,
       "quote": 24.63,
-      "difference_to_the_previous_day": 19655,
+      "differenceToThePreviousDay": 19655,
       "vaccine": [{
         "name": "biontech",
         "doses": 430185
@@ -590,11 +604,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Schleswig-Holstein",
     "inhabitants": 2903773,
+    "isState": true,
     "rs": "01",
     "vaccinatedAtLeastOnce": {
       "doses": 1453333,
       "quote": 50.05,
-      "difference_to_the_previous_day": 21580,
+      "differenceToThePreviousDay": 21580,
       "vaccine": [{
         "name": "biontech",
         "doses": 984112
@@ -612,7 +627,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 757298,
       "quote": 26.08,
-      "difference_to_the_previous_day": 22415,
+      "differenceToThePreviousDay": 22415,
       "vaccine": [{
         "name": "biontech",
         "doses": 612893
@@ -630,11 +645,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Thüringen",
     "inhabitants": 2133378,
+    "isState": true,
     "rs": "16",
     "vaccinatedAtLeastOnce": {
       "doses": 974457,
       "quote": 45.68,
-      "difference_to_the_previous_day": 10321,
+      "differenceToThePreviousDay": 10321,
       "vaccine": [{
         "name": "biontech",
         "doses": 679316
@@ -652,7 +668,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 534526,
       "quote": 25.06,
-      "difference_to_the_previous_day": 17225,
+      "differenceToThePreviousDay": 17225,
       "vaccine": [{
         "name": "biontech",
         "doses": 448856
@@ -670,11 +686,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Bundesressorts",
     "inhabitants": 0,
+    "isState": false,
     "rs": "None",
     "vaccinatedAtLeastOnce": {
       "doses": 135585,
       "quote": 0,
-      "difference_to_the_previous_day": 6622,
+      "differenceToThePreviousDay": 6622,
       "vaccine": [{
         "name": "biontech",
         "doses": 39751
@@ -692,7 +709,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 62422,
       "quote": 0,
-      "difference_to_the_previous_day": 2140,
+      "differenceToThePreviousDay": 2140,
       "vaccine": [{
         "name": "biontech",
         "doses": 2038
@@ -710,11 +727,12 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
   }, {
     "name": "Deutschland",
     "inhabitants": 83166711,
+    "isState": false,
     "rs": "None",
     "vaccinatedAtLeastOnce": {
       "doses": 39539170,
       "quote": 47.54,
-      "difference_to_the_previous_day": 425836,
+      "differenceToThePreviousDay": 425836,
       "vaccine": [{
         "name": "biontech",
         "doses": 26409579
@@ -732,7 +750,7 @@ Base-URL: `https://rki-vaccination-data.vercel.app`
     "fullyVaccinated": {
       "doses": 20648461,
       "quote": 24.83,
-      "difference_to_the_previous_day": 756442,
+      "differenceToThePreviousDay": 756442,
       "vaccine": [{
         "name": "biontech",
         "doses": 16923135
