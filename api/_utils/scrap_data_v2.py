@@ -54,7 +54,7 @@ def get_data():
         "name": state,
         "inhabitants": total,
         "isState": state in inhabitants.STATES,
-        "rs": str(row[0].value),
+        "rs": str(row[0].value) if row[0].value is not None else None,
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
           "quote": round(row[2].value / total * 100, 2) if total != 0 else 0,
