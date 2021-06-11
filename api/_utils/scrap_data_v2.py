@@ -23,8 +23,6 @@ def get_file():
 
 def get_data():
   """ Get Data for API """
-  states = inhabitants.STATES
-
   file = get_file()
 
   # Read excel sheet
@@ -44,17 +42,18 @@ def get_data():
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
-    if state in states or state == 'Bundesressorts' or state == 'Gesamt':
+    if state in (inhabitants.STATES + ['Bundesressorts', 'Gesamt']):
       if state == 'Bundesressorts':
         total = 0
       elif state == 'Gesamt':
         total = inhabitants.TOTAL
         state = "Deutschland"
       else:
-        total = states[state]['total']
+        total = inhabitants.STATES[state]['total']
       data = {
         "name": state,
         "inhabitants": total,
+        "isState": True if state in inhabitants.STATES else False,
         "rs": str(row[0].value),
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
