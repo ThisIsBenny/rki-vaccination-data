@@ -9,6 +9,7 @@ from api._utils import scrap_data
 try:
   data = scrap_data.get_data()
   res = {
+    'notice': 'endpoint is deprecated, please use /api/v2',
     'lastUpdate': data['lastUpdate'].isoformat(),
     'states': data['states'],
     'vaccinated': data['sumStates'],

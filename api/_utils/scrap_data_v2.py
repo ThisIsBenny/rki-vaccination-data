@@ -52,7 +52,6 @@ def get_data():
         state = "Deutschland"
       else:
         total = states[state]['total']
-
       data = {
         "name": state,
         "inhabitants": total,
