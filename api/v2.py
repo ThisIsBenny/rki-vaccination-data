@@ -4,24 +4,13 @@ import json
 from datetime import datetime
 import pytz
 # pylint: disable=import-error
-from api._utils import scrap_data
+from api._utils import scrap_data_v2
 
 try:
-  data = scrap_data.get_data()
+  data = scrap_data_v2.get_data()
   res = {
-    'notice': 'endpoint is deprecated, please use /api/v2',
     'lastUpdate': data['lastUpdate'].isoformat(),
-    'states': data['states'],
-    'vaccinated': data['sumStates'],
-    '2nd_vaccination': {
-      'vaccinated': data['sumStates2nd'],
-      'difference_to_the_previous_day': data['sumDiffStates2nd']
-    },
-    'sum_vaccine_doses': data['sumStates'] + data['sumStates2nd'],
-    'difference_to_the_previous_day': data['sumDiffStates'],
-    'vaccinations_per_1000_inhabitants': round(data['sumStates'] / data['totalGermany'] * 1000, 2),
-    'total': data['totalGermany'],
-    'quote': round(data['sumStates'] / data['totalGermany'] * 100, 2)
+    'data': data['data']
   }
   HTTPCODE = 200
 except TypeError:
