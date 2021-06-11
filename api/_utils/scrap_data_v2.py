@@ -44,9 +44,12 @@ def get_data():
     if row[1].value is None:
       continue
     state = row[1].value.replace("*", "").strip()
-    if state in states or state == 'Bundesressorts':
+    if state in states or state == 'Bundesressorts' or state == 'Gesamt':
       if state == 'Bundesressorts':
         total = 0
+      elif state == 'Gesamt':
+        total = inhabitants.TOTAL
+        state = "Deutschland"
       else:
         total = states[state]['total']
 
@@ -56,6 +59,7 @@ def get_data():
         "rs": str(row[0].value),
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
+          "quote": round(row[2].value / total * 100, 2) if total != 0 else 0,
           "difference_to_the_previous_day": row[7].value,
           "vaccine": [
             {
@@ -78,6 +82,7 @@ def get_data():
         },
         "fullyVaccinated": {
           "doses": row[8].value,
+          "quote": round(row[8].value / total * 100, 2) if total != 0 else 0,
           "difference_to_the_previous_day": row[13].value,
           "vaccine": [
             {
