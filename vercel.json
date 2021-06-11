@@ -3,6 +3,9 @@
   "functions": {
     "api/index.py": {
       "includeFiles": "_utils/**"
+    },
+    "api/v2.py": {
+      "includeFiles": "_utils/**"
     }
   },
   "headers": [
