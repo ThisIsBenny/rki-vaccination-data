@@ -53,7 +53,7 @@ def get_data():
       else:
         total = states[state]['total']
 
-      d = {
+      data = {
         "name": state,
         "inhabitants": total,
         "rs": str(row[0].value),
@@ -104,7 +104,7 @@ def get_data():
           ]
         }
       }
-      rows.append(d)
+      rows.append(data)
   return {
     "lastUpdate": last_update,
     "data": rows
