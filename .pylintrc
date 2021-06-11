@@ -1,3 +1,5 @@
 [MASTER]
 ignore=node_modules
 indent-string='  '
+[MESSAGES CONTROL]
+disable=R0801

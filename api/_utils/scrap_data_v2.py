@@ -53,7 +53,7 @@ def get_data():
       data = {
         "name": state,
         "inhabitants": total,
-        "isState": True if state in inhabitants.STATES else False,
+        "isState": state in inhabitants.STATES,
         "rs": str(row[0].value),
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
