@@ -10,5 +10,5 @@ jobs:
     - name: Check http status code of production site
       uses: lakuapik/gh-actions-http-status@v1
       with:
-        sites: '["${{ github.event.deployment_status.target_url }}", "${{ github.event.deployment_status.target_url }}/api"]'
-        expected: '[200, 200]'
+        sites: '["${{ github.event.deployment_status.target_url }}", "${{ github.event.deployment_status.target_url }}/api", "${{ github.event.deployment_status.target_url }}/api/v2"]'
+        expected: '[200, 200, 200]'
