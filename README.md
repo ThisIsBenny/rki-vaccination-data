@@ -10,6 +10,8 @@ The data source is an Excel sheet provided by RKI. The data will be updated ever
 
 # API
 
+_Note: v2 of the API was introduced and the documentation was adapted to the new version. v1 of the API is still available._
+
 Base-URL: `https://rki-vaccination-data.vercel.app`
 
 ## Show vaccination data
