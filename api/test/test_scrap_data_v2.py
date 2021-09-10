@@ -17,7 +17,7 @@ class TestModuleScrapData(unittest.TestCase):
     self.assertIn("data", data.keys())
 
     self.assertEqual(type(data["lastUpdate"]).__name__, "datetime")
-    self.assertEqual(type(data["data"]).__name__, "dict")
+    self.assertEqual(type(data["data"]).__name__, "list")
 
 if __name__ == '__main__':
   unittest.main()
