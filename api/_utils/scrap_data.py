@@ -32,9 +32,9 @@ def get_data():
   sheet = work_book[work_book.sheetnames[2]]
 
   # Load update time
-  last_update_raw_string = work_book.sheetnames[2]
+  first_sheet = work_book[work_book.sheetnames[0]]
   relast_update_match = re.search(
-      r"[\d]{2}\.[\d]{2}\.[\d]{2}", last_update_raw_string)
+      r"[\d]{2}\.[\d]{2}\.[\d]{2}", first_sheet['A3'].value)
   last_update = datetime.datetime.strptime(
       relast_update_match.group(), '%d.%m.%y')
 
