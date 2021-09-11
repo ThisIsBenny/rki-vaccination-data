@@ -81,7 +81,7 @@ def get_data():
         "fullyVaccinated": {
           "doses": row[8].value,
           "quote": round(row[8].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[13].value,
+          "differenceToThePreviousDay": row[12].value,
           "vaccine": [
             {
               "name": "biontech",
@@ -97,7 +97,7 @@ def get_data():
             },
             {
               "name": "janssen",
-              "doses": row[12].value
+              "doses": row[6].value
             }
           ]
         }
