@@ -85,15 +85,19 @@ def get_data():
           "vaccine": [
             {
               "name": "biontech",
-              "doses": row[9].value
+              "doses": row[3].value + row[9].value
             },
             {
               "name": "moderna",
-              "doses": row[10].value
+              "doses": row[4].value + row[10].value
             },
             {
               "name": "astrazeneca",
-              "doses": row[11].value
+              "doses": row[5].value + row[11].value
+            },
+            {
+              "name": "janssen",
+              "doses": row[6].value
             }
           ]
         }
