@@ -85,19 +85,26 @@ def get_data():
           "vaccine": [
             {
               "name": "biontech",
-              "doses": row[3].value + row[9].value
+              "firstDoses": row[3].value,
+              "secondDoses": row[9].value,
+              "totalDoses": row[3].value + row[9].value
             },
             {
               "name": "moderna",
-              "doses": row[4].value + row[10].value
+              "firstDoses": row[10].value,
+              "secondDoses": row[4].value,
+              "totalDoses": row[4].value + row[10].value
             },
             {
               "name": "astrazeneca",
-              "doses": row[5].value + row[11].value
+              "firstDoses": row[11].value,
+              "secondDoses": row[5].value,
+              "totalDoses": row[5].value + row[11].value
             },
             {
               "name": "janssen",
-              "doses": row[6].value
+              "firstDoses": row[6].value,
+              "totalDoses": row[6].value
             }
           ]
         }
