@@ -79,25 +79,32 @@ def get_data():
           ]
         },
         "fullyVaccinated": {
-          "doses": row[8].value,
-          "quote": round(row[8].value / total * 100, 2) if total != 0 else 0,
+          "doses": row[8].value + row[6].value,
+          "quote": round((row[8].value + row[6].value) / total * 100, 2) if total != 0 else 0,
           "differenceToThePreviousDay": row[12].value,
           "vaccine": [
             {
               "name": "biontech",
-              "doses": row[9].value
+              "firstDoses": row[3].value,
+              "secondDoses": row[9].value,
+              "totalDoses": row[3].value + row[9].value
             },
             {
               "name": "moderna",
-              "doses": row[10].value
+              "firstDoses": row[10].value,
+              "secondDoses": row[4].value,
+              "totalDoses": row[4].value + row[10].value
             },
             {
               "name": "astrazeneca",
-              "doses": row[11].value
+              "firstDoses": row[11].value,
+              "secondDoses": row[5].value,
+              "totalDoses": row[5].value + row[11].value
             },
             {
               "name": "janssen",
-              "doses": row[6].value
+              "firstDoses": row[6].value,
+              "totalDoses": row[6].value
             }
           ]
         }
