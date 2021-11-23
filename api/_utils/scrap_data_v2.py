@@ -91,14 +91,14 @@ def get_data():
             },
             {
               "name": "moderna",
-              "firstDoses": row[10].value,
-              "secondDoses": row[4].value,
+              "firstDoses": row[4].value,
+              "secondDoses": row[10].value,
               "totalDoses": row[4].value + row[10].value
             },
             {
               "name": "astrazeneca",
-              "firstDoses": row[11].value,
-              "secondDoses": row[5].value,
+              "firstDoses": row[5].value,
+              "secondDoses": row[11].value,
               "totalDoses": row[5].value + row[11].value
             },
             {
