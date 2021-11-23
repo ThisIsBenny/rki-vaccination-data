@@ -107,7 +107,7 @@ def get_data():
               "totalDoses": row[6].value
             }
           ]
-        }
+        },
         "boosterVaccinated": {
           "doses": row[13].value,
           "quote": round(row[13].value / total * 100, 2) if total != 0 else 0,
