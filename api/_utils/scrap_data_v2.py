@@ -75,36 +75,46 @@ def get_data():
             {
               "name": "janssen",
               "doses": row[6].value
+            },
+            {
+              "name": "Novavax*",
+              "doses": row[7].value
             }
           ]
         },
         "fullyVaccinated": {
-          "doses": row[8].value + row[6].value,
-          "quote": round((row[8].value + row[6].value) / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[12].value,
+          "doses": row[9].value + row[6].value,
+          "quote": round((row[9].value + row[6].value) / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[13].value,
           "vaccine": [
             {
               "name": "biontech",
               "firstDoses": row[3].value,
-              "secondDoses": row[9].value,
-              "totalDoses": row[3].value + row[9].value
+              "secondDoses": row[10].value,
+              "totalDoses": row[3].value + row[10].value
             },
             {
               "name": "moderna",
-              "firstDoses": row[10].value,
-              "secondDoses": row[4].value,
-              "totalDoses": row[4].value + row[10].value
+              "firstDoses": row[4].value,
+              "secondDoses": row[11].value,
+              "totalDoses": row[4].value + row[11].value
             },
             {
               "name": "astrazeneca",
-              "firstDoses": row[11].value,
-              "secondDoses": row[5].value,
-              "totalDoses": row[5].value + row[11].value
+              "firstDoses": row[5].value,
+              "secondDoses": row[12].value,
+              "totalDoses": row[5].value + row[12].value
             },
             {
               "name": "janssen",
               "firstDoses": row[6].value,
               "totalDoses": row[6].value
+            },
+            {
+              "name": "novavax",
+              "firstDoses": row[7].value,
+              "secondDoses": row[13].value,
+              "totalDoses": row[7].value + row[13].value
             }
           ]
         }
