@@ -144,7 +144,7 @@ def get_data():
               "totalDoses": row[6].value + row[18].value
             }
           ]
-        }        
+        }
       }
       rows.append(data)
   return {
