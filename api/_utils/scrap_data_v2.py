@@ -85,7 +85,7 @@ def get_data():
         "fullyVaccinated": {
           "doses": row[9].value + row[6].value,
           "quote": round((row[9].value + row[6].value) / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[13].value,
+          "differenceToThePreviousDay": row[14].value,
           "vaccine": [
             {
               "name": "biontech",
@@ -119,29 +119,29 @@ def get_data():
           ]
         },
         "boosterVaccinated": {
-          "doses": row[13].value,
-          "quote": round(row[13].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[17].value,
+          "doses": row[15].value,
+          "quote": round(row[15].value / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[19].value,
           "vaccine": [
             {
               "name": "biontech",
               "firstDoses": row[3].value,
-              "secondDoses": row[9].value,
-              "boosterDoses": row[14].value,
-              "totalDoses": row[3].value + row[9].value + row[14].value
+              "secondDoses": row[10].value,
+              "boosterDoses": row[16].value,
+              "totalDoses": row[3].value + row[10].value + row[16].value
             },
             {
               "name": "moderna",
               "firstDoses": row[4].value,
-              "secondDoses": row[10].value,
-              "boosterDoses": row[15].value,
-              "totalDoses": row[4].value + row[10].value + row[15].value
+              "secondDoses": row[11].value,
+              "boosterDoses": row[17].value,
+              "totalDoses": row[4].value + row[11].value + row[17].value
             },
             {
               "name": "janssen",
               "firstDoses": row[6].value,
-              "boosterDoses": row[16].value,
-              "totalDoses": row[6].value + row[16].value
+              "boosterDoses": row[18].value,
+              "totalDoses": row[6].value + row[18].value
             }
           ]
         }        
