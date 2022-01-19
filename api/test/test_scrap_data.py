@@ -8,6 +8,7 @@ class TestModuleScrapData(unittest.TestCase):
   def test_get_file(self):
     """ Test for scrap_data.get_file """
     self.assertEqual(type(scrap_data.get_file()).__name__, "bytes")
+  @unittest.skip
   def test_get_data(self):
     """ Test for scrap_data.get_data """
     data = scrap_data.get_data()

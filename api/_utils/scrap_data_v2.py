@@ -43,6 +43,10 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
     if state in inhabitants.STATES or state in ['Bundesressorts', 'Gesamt']:
+      # Workaround for novavax
+      row[7].value = row[7].value if row[7].value != "-" else 0
+      row[13].value = row[13].value if row[13].value != "-" else 0
+
       if state == 'Bundesressorts':
         total = 0
       elif state == 'Gesamt':
@@ -58,7 +62,7 @@ def get_data():
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
           "quote": round(row[2].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[7].value,
+          "differenceToThePreviousDay": row[8].value,
           "vaccine": [
             {
               "name": "biontech",
@@ -75,66 +79,76 @@ def get_data():
             {
               "name": "janssen",
               "doses": row[6].value
+            },
+            {
+              "name": "novavax",
+              "doses": row[7].value
             }
           ]
         },
         "fullyVaccinated": {
-          "doses": row[8].value + row[6].value,
-          "quote": round((row[8].value + row[6].value) / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[12].value,
+          "doses": row[9].value + row[6].value,
+          "quote": round((row[9].value + row[6].value) / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[14].value,
           "vaccine": [
             {
               "name": "biontech",
               "firstDoses": row[3].value,
-              "secondDoses": row[9].value,
-              "totalDoses": row[3].value + row[9].value
+              "secondDoses": row[10].value,
+              "totalDoses": row[3].value + row[10].value
             },
             {
               "name": "moderna",
               "firstDoses": row[4].value,
-              "secondDoses": row[10].value,
-              "totalDoses": row[4].value + row[10].value
+              "secondDoses": row[11].value,
+              "totalDoses": row[4].value + row[11].value
             },
             {
               "name": "astrazeneca",
               "firstDoses": row[5].value,
-              "secondDoses": row[11].value,
-              "totalDoses": row[5].value + row[11].value
+              "secondDoses": row[12].value,
+              "totalDoses": row[5].value + row[12].value
             },
             {
               "name": "janssen",
               "firstDoses": row[6].value,
               "totalDoses": row[6].value
+            },
+            {
+              "name": "novavax",
+              "firstDoses": row[7].value,
+              "secondDoses": row[13].value,
+              "totalDoses": row[7].value + row[13].value
             }
           ]
         },
         "boosterVaccinated": {
-          "doses": row[13].value,
-          "quote": round(row[13].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[17].value,
+          "doses": row[15].value,
+          "quote": round(row[15].value / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[19].value,
           "vaccine": [
             {
               "name": "biontech",
               "firstDoses": row[3].value,
-              "secondDoses": row[9].value,
-              "boosterDoses": row[14].value,
-              "totalDoses": row[3].value + row[9].value + row[14].value
+              "secondDoses": row[10].value,
+              "boosterDoses": row[16].value,
+              "totalDoses": row[3].value + row[10].value + row[16].value
             },
             {
               "name": "moderna",
               "firstDoses": row[4].value,
-              "secondDoses": row[10].value,
-              "boosterDoses": row[15].value,
-              "totalDoses": row[4].value + row[10].value + row[15].value
+              "secondDoses": row[11].value,
+              "boosterDoses": row[17].value,
+              "totalDoses": row[4].value + row[11].value + row[17].value
             },
             {
               "name": "janssen",
               "firstDoses": row[6].value,
-              "boosterDoses": row[16].value,
-              "totalDoses": row[6].value + row[16].value
+              "boosterDoses": row[18].value,
+              "totalDoses": row[6].value + row[18].value
             }
           ]
-        }        
+        }
       }
       rows.append(data)
   return {
