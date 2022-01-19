@@ -44,8 +44,8 @@ def get_data():
     state = row[1].value.replace("*", "").strip()
     if state in inhabitants.STATES or state in ['Bundesressorts', 'Gesamt']:
       # Workaround for novavax
-      row[7].value = row[7].value if row[7].value is not "-" else 0
-      row[13].value = row[13].value if row[13].value is not "-" else 0
+      row[7].value = row[7].value if row[7].value != "-" else 0
+      row[13].value = row[13].value if row[13].value != "-" else 0
 
       if state == 'Bundesressorts':
         total = 0
