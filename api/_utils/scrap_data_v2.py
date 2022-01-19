@@ -43,6 +43,10 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
     if state in inhabitants.STATES or state in ['Bundesressorts', 'Gesamt']:
+      # Workaround for novavax
+      row[7].value = row[7].value if row[7].value is not "-" else 0
+      row[13].value = row[13].value if row[13].value is not "-" else 0
+
       if state == 'Bundesressorts':
         total = 0
       elif state == 'Gesamt':
@@ -77,7 +81,7 @@ def get_data():
               "doses": row[6].value
             },
             {
-              "name": "Novavax*",
+              "name": "novavax",
               "doses": row[7].value
             }
           ]
