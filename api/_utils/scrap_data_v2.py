@@ -30,9 +30,9 @@ def get_data():
   sheet = work_book[work_book.sheetnames[2]]
 
   # Load update time
-  last_update_raw_string = work_book.sheetnames[2]
+  first_sheet = work_book[work_book.sheetnames[0]]
   relast_update_match = re.search(
-      r"[\d]{2}\.[\d]{2}\.[\d]{2}", last_update_raw_string)
+      r"[\d]{2}\.[\d]{2}\.[\d]{2}", first_sheet['A3'].value)
   last_update = datetime.datetime.strptime(
       relast_update_match.group(), '%d.%m.%y')
 
@@ -43,6 +43,10 @@ def get_data():
       continue
     state = row[1].value.replace("*", "").strip()
     if state in inhabitants.STATES or state in ['Bundesressorts', 'Gesamt']:
+      # Workaround for novavax
+      row[7].value = row[7].value if row[7].value != "-" else 0
+      row[13].value = row[13].value if row[13].value != "-" else 0
+
       if state == 'Bundesressorts':
         total = 0
       elif state == 'Gesamt':
@@ -58,7 +62,7 @@ def get_data():
         "vaccinatedAtLeastOnce": {
           "doses": row[2].value,
           "quote": round(row[2].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[7].value,
+          "differenceToThePreviousDay": row[8].value,
           "vaccine": [
             {
               "name": "biontech",
@@ -75,29 +79,73 @@ def get_data():
             {
               "name": "janssen",
               "doses": row[6].value
+            },
+            {
+              "name": "novavax",
+              "doses": row[7].value
             }
           ]
         },
         "fullyVaccinated": {
-          "doses": row[8].value,
-          "quote": round(row[8].value / total * 100, 2) if total != 0 else 0,
-          "differenceToThePreviousDay": row[13].value,
+          "doses": row[9].value + row[6].value,
+          "quote": round((row[9].value + row[6].value) / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[14].value,
           "vaccine": [
             {
               "name": "biontech",
-              "doses": row[9].value
+              "firstDoses": row[3].value,
+              "secondDoses": row[10].value,
+              "totalDoses": row[3].value + row[10].value
             },
             {
               "name": "moderna",
-              "doses": row[10].value
+              "firstDoses": row[4].value,
+              "secondDoses": row[11].value,
+              "totalDoses": row[4].value + row[11].value
             },
             {
               "name": "astrazeneca",
-              "doses": row[11].value
+              "firstDoses": row[5].value,
+              "secondDoses": row[12].value,
+              "totalDoses": row[5].value + row[12].value
             },
             {
               "name": "janssen",
-              "doses": row[12].value
+              "firstDoses": row[6].value,
+              "totalDoses": row[6].value
+            },
+            {
+              "name": "novavax",
+              "firstDoses": row[7].value,
+              "secondDoses": row[13].value,
+              "totalDoses": row[7].value + row[13].value
+            }
+          ]
+        },
+        "boosterVaccinated": {
+          "doses": row[15].value,
+          "quote": round(row[15].value / total * 100, 2) if total != 0 else 0,
+          "differenceToThePreviousDay": row[19].value,
+          "vaccine": [
+            {
+              "name": "biontech",
+              "firstDoses": row[3].value,
+              "secondDoses": row[10].value,
+              "boosterDoses": row[16].value,
+              "totalDoses": row[3].value + row[10].value + row[16].value
+            },
+            {
+              "name": "moderna",
+              "firstDoses": row[4].value,
+              "secondDoses": row[11].value,
+              "boosterDoses": row[17].value,
+              "totalDoses": row[4].value + row[11].value + row[17].value
+            },
+            {
+              "name": "janssen",
+              "firstDoses": row[6].value,
+              "boosterDoses": row[18].value,
+              "totalDoses": row[6].value + row[18].value
             }
           ]
         }
